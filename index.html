@@ -3,172 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-sha-hash..." crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-    <nav id="desktop-nav">
-        <div class="logo">John Doe</div>
-        <div>
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <nav id="hamburger-nav">
-        <div class="logo">John Doe</div>
-        <div class="hamburger-menu">
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          </div>
-        </div>
-      </nav>
-
-    <section id="home">
-        <div class="home-container">
-            <img src="assets/about-pic.jpeg" alt="Gian Carlo Manuel's Photo">
-            <div class="text-container">
-                <p>Hello! I am</p>
-                <h2>Gian Carlo Manuel</h2>
-                <p>Web Developer</p>
-                <div class="links">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                </div>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img src="assets/gmlogo.png" alt="Gian Manuel's Logo" class="logo-img">
             </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>Get To Know Me</h2>
-        
-        <div class="about-container">
-            <img src="assets/grad-pic.jpg" alt="About Image">
-            <div class="about-content">
-                <p>Hi, I'm Gian Carlo Manuel. A web developer in the making. I'm here to showcase my talent and love for web.
-                    Well, mostly, in the front-end side. I really love designing stuff. It makes me bring out the best of my imagination.</p>
-                <p>I love art. From music, film, photography, artworks, nature, etc. Art in general is just mind-blowing. It calms my soul and gives me the energy that gets me through the day and life (yup).</p>
-            </div>
-        </div>
-
-        <div class="info-container">
-            <!-- Personal Details Container -->
-            <div class="section-container">
-                <h3><i class="fas fa-user"></i> Details</h3>
-                <p><b>Name</b>: Gian Carlo E. Manuel</p>
-                <p><b>Date of Birth</b>: February 11, 2003</p>
-                <p><b>Address</b>: Calulut, San Fernando, Pampanga</p>
-                <!-- Add more personal details as needed -->
-            </div>
+            <nav class="nav" id="nav">
+                <ul class="nav-list" id="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </header>
+            <main class="main-content">
     
-            <!-- Education Container -->
-            <div class="section-container">
-                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <p><b>Course</b>: Bachelor of Science in<br> Information Technology with Area<br> of Specialization in Web Development</p>
-                <p><b>University</b>: Holy Angel University</p>
-                <!-- Add more education details as needed -->
-            </div>
-    
-            <!-- Skills Container -->
-             <div class="section-container">
-            <h3><i class="fas fa-code"></i> Skills</h3>
-            <div class="progress">
-                <div class="progress-bar bg-dark" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">HTML</div>
-            </div>
-            <div class="progress">
-                <div class="progress-bar bg-dark" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">CSS</div>
-            </div>
-            <div class="progress">
-                <div class="progress-bar bg-dark" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Python</div>
-            </div>
-            <div class="progress">
-                <div class="progress-bar bg-dark" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">Java</div>
-            </div>
-            <div class="progress">
-                <div class="progress-bar bg-dark" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">JavaScript</div>
-            </div>
-            
-        </div>
-    
-            <!-- Experiences Container -->
-            <!--<div class="section-container">
-                <h3><i class="fas fa-briefcase"></i> Experiences</h3>
-                <p>Job Title: Your Job Title</p>
-                <p>Company: Your Company</p>
-            </div>
-        </div>-->
-    </section>
+<section id="home" class="section">
+    <h2 class="section-title">Home Section</h2>
+    <p class="section-content">Welcome to my portfolio.</p>
+</section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Here are my most recent projects. Check them out.</p>
-            <!-- Project 1 -->
-            <div class="project">
-                <h3>Wear Potential Website</h3>
-                <p>A project for 6WEBSEA - Web Search Engine Optimization and Analyzation</p>
-                <a href="https://www.wearpotential.com" target="_blank" class="view-project">View Project</a>
-            </div>
-    
-            <!-- Project 2 -->
-            <div class="project">
-                <h3>Wordpress Blog</h3>
-                <p>An output presented for 6DWEBTOOLS - Dynamic Web Applications and Development Tools.</p>
-                <a href="https://www.sunsoutarchives.wordpress.com" target="_blank" class="view-project">View Project</a>
-            </div>
+<section id="about" class="section">
+    <h2 class="section-title">About Section</h2>
+    <p class="section-content">About me content goes here.</p>
+</section>
 
-            <!-- Project 3 -->
-            <div class="project">
-                <h3>Flawless Findings Project</h3>
-                <p>An output presented for 6ADVDBASE - Advanced Database Systems.</p>
-                <a href="assets/flawlessfindings.pdf" target="_blank" class="view-project">View Project</a>
-            </div>
-        </div>
-    </section>
+<section id="creative-resume" class="section">
+    <h2 class="section-title">Creative Resume Section</h2>
+    <p class="section-content">Creative resume details go here.</p>
+</section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Or get in touch with me directly <a href="mailto:gemanuel.0211@gmail.com">here</a>.</p>
+<section id="transcript" class="section">
+    <h2 class="section-title">Transcript Section</h2>
+    <p class="section-content">Transcript details go here.</p>
+</section>
 
-         <!-- Social Icons -->
-         <div class="social-icons">
-            <a href="https://www.instagram.com/manuelgian_/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/inggn.11" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-            <a href="https://open.spotify.com/user/792yvul708fo497rqksbrr180?si=655bb0da450343ce" target="_blank" rel="noopener noreferrer"><i class="fab fa-spotify"></i></a>
-            <a href="https://www.sunsoutarchives.wordpress.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-wordpress"></i></a>
-            <a href="https://linkedin.com/in/your_linkedin" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </section>
+<section id="professional-affiliations" class="section">
+    <h2 class="section-title">Professional Affiliations Section</h2>
+    <p class="section-content">Professional affiliations details go here.</p>
+</section>
 
-    <button onclick="scrollToTop()" id="back-to-top-btn" title="Go to top">▲</button>
+<section id="skills" class="section">
+    <h2 class="section-title">Skills Section</h2>
+    <p class="section-content">Skills details go here.</p>
+</section>
 
-    <footer>
-         &copy; 2024 Gian Carlo Manuel
+<section id="statement-of-work-philosophy" class="section">
+    <h2 class="section-title">Statement of Work Philosophy Section</h2>
+    <p class="section-content">Statement of work philosophy details go here.</p>
+</section>
+
+<section id="honors-and-awards" class="section">
+    <h2 class="section-title">Honors and Awards Section</h2>
+    <p class="section-content">Honors and awards details go here.</p>
+</section>
+
+<section id="evaluations" class="section">
+    <h2 class="section-title">Evaluations Section</h2>
+    <p class="section-content">Evaluations details go here.</p>
+</section>
+
+<section id="student-learning" class="section">
+    <h2 class="section-title">Student Learning Section</h2>
+    <p class="section-content">Student learning details go here.</p>
+</section>
+
+<section id="projects" class="section">
+    <h2 class="section-title">Projects Section</h2>
+    <p class="section-content">My projects will be showcased here.</p>
+</section>
+
+<section id="contact" class="section">
+    <h2 class="section-title">Contact Section</h2>
+    <p class="section-content">Contact information goes here.</p>
+</section>
+
+</main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Gian Manuel</p>
     </footer>
 
-    <script>
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-        </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
