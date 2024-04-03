@@ -90,7 +90,6 @@ body {
     padding: 50px;
 }
 
-/* Additional styles */
 .section-title {
     margin-bottom: 20px;
 }
@@ -173,7 +172,7 @@ h2.section-title {
 }
 
 
-/* HOME STYLES */
+/* HOME SECTION STYLES */
 .home-container {
     display: flex;
     align-items: center;
@@ -198,7 +197,7 @@ h2.section-title {
 }
 
 
-/* ABOUT STYLES */
+/* ABOUT SECTION STYLES */
 .about-container {
     display: flex;
     justify-content: center;
@@ -219,13 +218,13 @@ h2.section-title {
     max-width: 600px; /* Adjust the max-width as needed */
 }
 
-.about-container {
+.about-container-2 {
     display: flex;
     justify-content: space-between;
 }
 
-.about-goals-container,
-.about-philosophy-container {
+.about-details-container,
+.about-goals-container {
     width: 45%;
     background-color: #768e1f;
     color: white;
@@ -235,16 +234,16 @@ h2.section-title {
 
 }
 
-.about-goals-container {
+.about-details-container {
     margin-right: 5%;
 }
 
-.about-goals-container:hover,
-.about-philosophy-container:hover {
+.about-details-container:hover,
+.about-goals-container:hover {
     transform: translateY(-5px) scale(1.05); /* Scale up and move up slightly */
 }
 
-/* AFFILIATIONS SECTIONS */
+/* AFFILIATIONS SECTIONS STYLES */
 .affiliations-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two containers per row */
@@ -303,6 +302,194 @@ h2.section-title {
     background-color: #768e1f; /* Darker shade on hover */
     color: #fff;
 }
+
+/* SKILLS SECTION STYLES */
+.skills-container {
+    margin-bottom: 20px;
+}
+
+h2.skills-title {
+    text-align: center;
+}
+
+.progress-bar {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    height: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #768e1f;
+    color: white;
+    height: 100%;
+    text-align: center;
+    line-height: 20px; /* Center the text vertically */
+}
+
+#progress1 {
+    animation: progressAnimation1 3s linear forwards; /* Animation duration: 3s */
+}
+
+#progress2 {
+    animation: progressAnimation2 3s linear forwards; /* Animation duration: 3s */
+}
+
+#progress3 {
+    animation: progressAnimation3 3s linear forwards; /* Animation duration: 3s */
+}
+
+#progress4 {
+    animation: progressAnimation4 3s linear forwards; /* Animation duration: 3s */
+}
+
+#progress5 {
+    animation: progressAnimation5 3s linear forwards; /* Animation duration: 3s */
+}
+
+#progress6 {
+    animation: progressAnimation5 3s linear forwards; /* Animation duration: 3s */
+}
+
+@keyframes progressAnimation1 {
+    0% {
+        width: 0; /* Start with 0% width */
+    }
+    100% {
+        width: 75%; /* End with 80% width */
+    }
+}
+
+@keyframes progressAnimation2 {
+    0% {
+        width: 0; /* Start with 0% width */
+    }
+    100% {
+        width: 40%; /* End with 50% width */
+    }
+}
+
+@keyframes progressAnimation3 {
+    0% {
+        width: 0; /* Start with 0% width */
+    }
+    100% {
+        width: 30%; /* End with 30% width */
+    }
+}
+
+@keyframes progressAnimation4 {
+    0% {
+        width: 0; /* Start with 0% width */
+    }
+    100% {
+        width: 40%; /* End with 40% width */
+    }
+}
+
+@keyframes progressAnimation5 {
+    0% {
+        width: 0; /* Start with 0% width */
+    }
+    100% {
+        width: 60%; /* End with 60% width */
+    }
+}
+
+@keyframes progressAnimation6 {
+    0% {
+        width: 0; /* Start with 0% width */
+    }
+    100% {
+        width: 40%; /* End with 60% width */
+    }
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+}
+
+.image-item {
+    text-align: center;
+    flex-basis: calc(25% - 20px); /* Adjust as needed */
+    margin: 0 10px; /* Adjust as needed */
+}
+
+.image-item img {
+    max-width: 80%;
+    height: auto;
+}
+
+.carousel {
+    width: 100%; /* Adjust as needed */
+    margin: 0 auto; /* Center the carousel */
+}
+
+.carousel img {
+    width: 100%; /* Make sure images fill the entire carousel container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* PROJECTS SECTION STYLES */
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-item {
+    width: calc(33.33% - 20px); /* Adjust as needed for 3 items per row */
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #768e1f;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-details {
+    margin-top: 10px;
+}
+
+.project-details h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.project-details p {
+    margin-bottom: 5px;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: #fbf3d3;
+    color: #768e1f;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    background-color: #768e1f;
+    color: #fff;
+}
+
+/* Add hover effect */
+.project-item:hover {
+    transform: translateY(-5px); /* Move the container up */
+}
+
+
 
 
 /* Media query for smaller screens */
