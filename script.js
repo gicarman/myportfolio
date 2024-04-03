@@ -12,3 +12,15 @@ $(document).ready(function(){
     });
 });
 
+let currentSlide = 0;
+const slides = document.querySelectorAll('.photo');
+
+function showSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
+
+function changeSlide(n) {
+    showSlide(currentSlide + n);
+}
