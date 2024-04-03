@@ -595,7 +595,12 @@ h2.skills-title {
     color: #fff;
 }
 
+/* STUDENT LEARNING SECTION STYLES */
+h2.learning-title {
+    text-align: center;
+}
 
+/* EVALUATION SECTION STYLES */
 
 
 /* CONTACT SECTION STYLES */
