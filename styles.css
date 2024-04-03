@@ -408,19 +408,44 @@ h2.skills-title {
 
 .images-container {
     display: flex;
-    justify-content: space-between; /* Adjust as needed */
+    justify-content: space-between;
 }
 
 .image-item {
     text-align: center;
-    flex-basis: calc(25% - 20px); /* Adjust as needed */
-    margin: 0 10px; /* Adjust as needed */
+    flex-basis: calc(25% - 20px);
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
 }
 
 .image-item img {
     max-width: 80%;
     height: auto;
+    transition: transform 0.3s ease;
 }
+
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+.image-item h3 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover h3 {
+    opacity: 1;
+}
+
 
 .carousel {
     width: 100%; /* Adjust as needed */
