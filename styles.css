@@ -139,7 +139,6 @@ h2.section-title {
     bottom: 50px; /* Adjust bottom position according to your footer height */
     left: 0;
     overflow-y: auto;
-    padding: 20px; /* Equal padding on top and bottom */
 }
 
 /* Hide scrollbar for WebKit browsers */
@@ -221,10 +220,6 @@ h2.section-title {
 }
 
 
-
-
-
-
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .aside {
@@ -266,5 +261,25 @@ h2.section-title {
     .nav-item {
         margin-right: 0;
         margin-bottom: 10px;
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-item {
+        margin: 10px 0; /* Adjust margin for spacing between nav items */
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .aside {
+        display: none;
     }
 }
