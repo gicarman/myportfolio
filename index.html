@@ -6,6 +6,14 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/site-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-sha-hash..." crossorigin="anonymous" />
+   
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
     
 </head>
 
@@ -55,7 +63,7 @@
     
 <section id="home" class="section">
     <div class="home-container">
-        <img src="assets/about-pic.jpeg" alt="Gian Carlo Manuel's Photo">
+        <img src="assets/home-pic.jpeg" alt="Gian Carlo Manuel's Photo">
         <div class="text-container">
             <p>Hello! I am</p>
             <h1>Gian Carlo Manuel</h1>
@@ -69,7 +77,7 @@
     <h2 class="section-title">Get To Know Me</h2>
     <div class="about-container">
         <div class="about-image">
-            <img src="assets/grad-pic.jpg" alt="About Me Image">
+            <img src="assets/grad-pic.jpg" alt="Gian Manuel Graduation Photo">
         </div>
         <div class="about-text">
             <p>Hi, I'm Gian Carlo E. Manuel. I'm 21 years old and a web developer in the making. I'm here to showcase my talent and love for web.
@@ -81,19 +89,17 @@
             <p> I'm elated to explore and learn new things in this wonderful field of web development</p>
         </div>
     </div>
-    <div class="about-container">
-        <div class="about-goals-container">
-            <h3>Statement of Student's Goals</h3>
-            <ul>
-                <li>Goal 1</li>
-                <li>Goal 2</li>
-                <li>Goal 3</li>
-                <li>Goal 4</li>
-                <li>Goal 5</li>
-            </ul>
+    <div class="about-container-2">
+        <div class="about-details-container">
+            <h3><i class="fas fa-user"></i> Details</h3>
+            <p><b>Name</b>: Gian Carlo E. Manuel</p>
+            <p><b>Date of Birth</b>: February 11, 2003</p>
+            <p><b>Address</b>: Calulut, San Fernando, Pampanga</p>
+            <p><b>Course</b>: Bachelor of Science in Information Technology with Area of Specialization in Web Development</p>
+            <p><b>University</b>: Holy Angel University</p>
         </div>
-        <div class="about-philosophy-container">
-            <h3>Philosophy of Education</h3>
+        <div class="about-goals-container">
+            <h3><i class="fa-solid fa-seedling"></i> Statement of Student's Goals</h3>
             <ul>
                 <li>Philosophy 1</li>
                 <li>Philosophy 2</li>
@@ -103,6 +109,10 @@
             </ul>
         </div>
     </div>
+    <div class="additional-container">
+        <h3>Philosophy of Education</h3>
+        <p>This is a description of the additional content you want to include below the two containers.</p>
+    </div>
 
 </section>
 
@@ -110,25 +120,25 @@
     <h2 class="section-title">Professional Affiliations</h2>
     <div class="affiliations-container">
         <div class="affiliation-item">
-            <img src="assets/affiliations/Manuel_CG.png" alt="Affiliation 1">
+            <img src="assets/affiliations/Manuel_CG.png" alt="Code Geeks Certificate">
             <h3>Code Geeks</h3>
             <p>Membership Certificate</p>
             <a href="assets/affiliations/Manuel_CG.png" class="view-full-image-btn" target="_blank">View Full Image</a>
         </div>
         <div class="affiliation-item">
-            <img src="assets/affiliations/Manuel_Cisco.png" alt="Affiliation 2">
+            <img src="assets/affiliations/Manuel_Cisco.png" alt="Cisco Certificate">
             <h3>Cisco Networking Academy</h3>
             <p>Introduction to Cybersecurity</p>
             <a href="assets/affiliations/Manuel_Cisco.png" class="view-full-image-btn" target="_blank">View Full Image</a>
         </div>
         <div class="affiliation-item">
-            <img src="assets/affiliations/Manuel_GA4.png" alt="Affiliation 2">
+            <img src="assets/affiliations/Manuel_GA4.png" alt="GA4 Certificate">
             <h3>Google Analytics (GA4)</h3>
             <p>Certification of Completion</p>
             <a href="assets/affiliations/Manuel_GA4.png" class="view-full-image-btn" target="_blank">View Full Image</a>
         </div>
         <div class="affiliation-item">
-            <img src="assets/affiliations/Manuel_RedHat.png" alt="Affiliation 2">
+            <img src="assets/affiliations/Manuel_RedHat.png" alt="RedHat Academy Certificate">
             <h3>RedHat Academy</h3>
             <p>Certificate of Attendance</p>
             <a href="assets/affiliations/Manuel_RedHat.png" class="view-full-image-btn" target="_blank">View Full Image</a>
@@ -136,14 +146,154 @@
 </section>
 
 <section id="skills" class="section">
-    <h2 class="section-title">Skills Section</h2>
-    <p class="section-content">Skills details go here.</p>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+        <h2 class="skills-title">Programming & Development Tools</h2></br>
+        <h3>HTML/CSS</h3>
+        <div class="progress-bar">
+            <div class="progress" id="progress1"></div>
+        </div>
+    </div>
+    <div class="skills-container">
+        <h3>Java</h3>
+        <div class="progress-bar">
+            <div class="progress" id="progress2"></div>
+        </div>
+    </div>
+    <div class="skills-container">
+        <h3>Python</h3>
+        <div class="progress-bar">
+            <div class="progress" id="progress3"></div>
+        </div>
+    </div>
+    <div class="skills-container">
+        <h3>PHP</h3>
+        <div class="progress-bar">
+            <div class="progress" id="progress4"></div>
+        </div>
+    </div>
+    <div class="skills-container">
+        <h3>JavaScript</h3>
+        <div class="progress-bar">
+            <div class="progress" id="progress5"></div>
+        </div>
+    </div>
+    <div class="skills-container">
+        <h3>SQL / NoSQL</h3>
+        <div class="progress-bar">
+            <div class="progress" id="progress6"></div>
+        </div>
+    </div>
+
+    <h2 class = "skills-title">Other Specific Skills</h2></br>
+     <div class="images-container">
+        <div class="image-item">
+            <img src="assets/skills/canvalogo.png" alt="Canva Logo">
+            <h3>Canva</h3>
+        </div>
+        <div class="image-item">
+            <img src="assets/skills/capcutlogo.png" alt="Capcut Logo">
+            <h3>Capcut</h3>
+        </div>
+        <div class="image-item">
+            <img src="assets/skills/pslogo.png" alt="Adobe Photoshop Logo">
+            <h3>Adobe Photoshop</h3>
+        </div>
+        <div class="image-item">
+            <img src="assets/skills/ailogo.png" alt="Adobe Illustrator Logo">
+            <h3>Adobe Illustrator</h3>
+        </div>
+    </div></br>
+
+    <h2 class = "skills-title">Sample Works</h2></br>
+    <div class="carousel">
+        <div><img src="assets/skills/1.png" alt="CD and Vinyl Mockup"></div>
+        <div><img src="assets/skills/2.png" alt="Tour Mockup Poster"></div>
+        <div><img src="assets/skills/3.png" alt="Gian Manuel's Personal Logo"></div>
+        <div><img src="assets/skills/4.png" alt="Typography Gela Edit"></div>
+        <div><img src="assets/skills/5.png" alt="Bucci Edit"></div>
+        <div><img src="assets/skills/6.png" alt="Website Mockup"></div>
+        <div><img src="assets/skills/7.png" alt="Typography Gela Edit 2"></div>
+        <div><img src="assets/skills/8.png" alt="Website Wireframe"></div>
+        <div><img src="assets/skills/9.png" alt="Concept App Activity"></div>
+        <div><img src="assets/skills/10.png" alt="Company Banner Activity"></div>
+    </div>
+    
+    
 </section>
 
 <section id="projects" class="section">
     <h2 class="section-title">Projects Section</h2>
-    <p class="section-content">My projects will be showcased here.</p>
+    <div class="projects-container">
+        <div class="project-item">
+            <img src="assets/projects/ffss.png" alt="Project 1">
+            <div class="project-details">
+                <h3>Flawless Findings</h3>
+                <p>Course: Advanced Database Systems</p>
+                <p>Description: Project Description</p>
+                <p>Date: November 2023</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="assets/projects/wpss.png" alt="Project 2">
+            <div class="project-details">
+                <h3>Wear Potential</h3>
+                <p>Course: Web Search Engine Optimization and Analytics</p>
+                <p>Description: Project Description</p>
+                <p>Date: November 2023</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="assets/projects/rrss.png" alt="Project 3">
+            <div class="project-details">
+                <h3>Read Rover</h3>
+                <p>Course: Application and Systems Integration</p>
+                <p>Description: Project Description</p>
+                <p>Date: DD/MM/YYYY</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="assets/projects/speakss.png" alt="Project 4">
+            <div class="project-details">
+                <h3>Speak Sharp</h3>
+                <p>Course: Information Management</p>
+                <p>Description: Project Description</p>
+                <p>Date: May 2023</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="assets/projects/abgss.png" alt="Project 5">
+            <div class="project-details">
+                <h3>archives by gian</h3>
+                <p>Course: Dynamic Web Applications and Development Tools</p>
+                <p>Description: Project Description</p>
+                <p>Date: March 2023</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <img src="assets/projects/mbgss.png" alt="Project 6">
+            <div class="project-details">
+                <h3>mixtape by gian</h3>
+                <p>Course: Web Technologies</p>
+                <p>Description: Project Description</p>
+                <p>Date: November 2022</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+        <!-- Add more project items here -->
+    </div>
 </section>
+
 
 <section id="statement-of-work-philosophy" class="section">
     <h2 class="section-title">Statement of Work Philosophy Section</h2>
