@@ -489,7 +489,114 @@ h2.skills-title {
     transform: translateY(-5px); /* Move the container up */
 }
 
+/* AWARDS SECTION STYLES */
+.gallery {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
+.photo {
+    display: none;
+}
+
+.photo.active {
+    display: block;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+}
+
+.caption h3 {
+    margin-bottom: 5px;
+}
+
+.caption p {
+    margin: 0;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.view-transcript-btn {
+    width: 200px;
+    display: block; /* Change to block to take full width */
+    margin: 20px auto 0; /* Center the button horizontally with top margin */
+    padding: 10px 20px;
+    background-color: #768e1f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    text-decoration: none; /* Remove default underline for links */
+    text-align: center;
+}
+
+.view-transcript-btn:hover {
+    background-color: #657a1a;
+    color: #fff;
+}
+
+
+
+
+/* CONTACT SECTION STYLES */
+
+#contact {
+    text-align: center;
+}
+
+.contact-details {
+    margin-bottom: 20px; /* Add some space between contact details and social icons */
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 2em;
+    margin: 0 0.5em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #768e1f;
+}
 
 
 /* Media query for smaller screens */
