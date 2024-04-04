@@ -105,6 +105,7 @@ body {
 
 .section-content {
     line-height: 1.6;
+    text-align: center;
 }
 
 h2.section-title {
@@ -337,7 +338,7 @@ h2.section-title {
     margin-top: 10px;
 }
 
-.view-full-image-btn {
+.full-image-btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #fbf3d3;
@@ -347,7 +348,7 @@ h2.section-title {
     transition: background-color 0.3s ease;
 }
 
-.view-full-image-btn:hover {
+.full-image-btn:hover {
     background-color: #768e1f; /* Darker shade on hover */
     color: #fff;
 }
@@ -768,6 +769,44 @@ h2.learning-title {
 
 /* EVALUATION SECTION STYLES */
 
+.testi-text p {
+    text-align: center;
+}
+
+* {box-sizing: border-box}
+
+.prof-eval-container {
+  position: relative;
+  width: 50%;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: #768e1f;
+  color: #fff;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.prof-eval-container:hover .overlay {
+  opacity: 1;
+}
 
 /* CONTACT SECTION STYLES */
 #contact {
@@ -784,7 +823,7 @@ h2.learning-title {
 
 .social-icons a {
     color: #000;
-    font-size: 2em;
+    font-size: 2.5em;
     margin: 0 0.5em;
     text-decoration: none;
 }
