@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
     background-color: #fbf3d3;
 }
 
@@ -19,6 +19,10 @@ body {
     background-color: #c4c484;
     color: #000;
 }
+
+/* Add other styles */
+
+
 
 .logo {
     display: flex;
@@ -54,14 +58,15 @@ body {
 
 .cv-btn {
     padding: 10px 20px;
-    background-color: #fbf3d3; /* Primary color */
-    color: #768e1f; /* Text color */
+    background-color: #fbf3d3;
+    color: #768e1f;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-left: 20px; /* Push the button to the right */
     font-size: 16px;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
 .cv-btn:hover {
@@ -130,7 +135,7 @@ h2.section-title {
 
 /* Aside styles */
 .aside {
-    width: 160px; /* Adjust width as needed */
+    width: 200px; /* Adjust width as needed */
     background-color: #c4c484; /* Sidebar background color */
     color: #000; /* Sidebar text color */
     position: fixed;
@@ -191,8 +196,8 @@ h2.section-title {
 
 .home-container img {
     border-radius: 50%;
-    width: 400px; /* Adjust the size as needed */
-    height: 400px; /* Adjust the size as needed */
+    width: 500px; /* Adjust the size as needed */
+    height: 500px; /* Adjust the size as needed */
     margin-right: 20px;
 }
 
@@ -209,8 +214,8 @@ h2.section-title {
 }
 
 .about-image img {
-    height: 350px;
-    width: 350px;
+    height: 450px;
+    width: 450px;
     border-radius: 5%;
 }
 
@@ -329,27 +334,27 @@ h2.skills-title {
 }
 
 #progress1 {
-    animation: progressAnimation1 3s linear forwards; /* Animation duration: 3s */
+    animation: progressAnimation1 5s linear forwards infinite; /* Animation duration: 3s */
 }
 
 #progress2 {
-    animation: progressAnimation2 3s linear forwards; /* Animation duration: 3s */
+    animation: progressAnimation2 5s linear forwards infinite; /* Animation duration: 3s */
 }
 
 #progress3 {
-    animation: progressAnimation3 3s linear forwards; /* Animation duration: 3s */
+    animation: progressAnimation3 5s linear forwards infinite; /* Animation duration: 3s */
 }
 
 #progress4 {
-    animation: progressAnimation4 3s linear forwards; /* Animation duration: 3s */
+    animation: progressAnimation4 5s linear forwards infinite; /* Animation duration: 3s */
 }
 
 #progress5 {
-    animation: progressAnimation5 3s linear forwards; /* Animation duration: 3s */
+    animation: progressAnimation5 5s linear forwards infinite; /* Animation duration: 3s */
 }
 
 #progress6 {
-    animation: progressAnimation5 3s linear forwards; /* Animation duration: 3s */
+    animation: progressAnimation6 5s linear forwards infinite; /* Animation duration: 3s */
 }
 
 @keyframes progressAnimation1 {
@@ -406,6 +411,7 @@ h2.skills-title {
     }
 }
 
+
 .images-container {
     display: flex;
     justify-content: space-between;
@@ -447,15 +453,32 @@ h2.skills-title {
 }
 
 
+/* Keyframes for the carousel animation */
+@keyframes carouselAnimation {
+    0% {
+        transform: translateX(0); /* Start with no translation */
+    }
+    100% {
+        transform: translateX(-1300%); /* Move the carousel all the way to the left */
+    }
+}
+
+/* Apply the animation to the carousel */
 .carousel {
     width: 100%; /* Adjust as needed */
     margin: 0 auto; /* Center the carousel */
+    overflow: hidden; /* Hide overflow to ensure only one image is visible at a time */
 }
 
+/* Apply the animation to the images */
 .carousel img {
     width: 100%; /* Make sure images fill the entire carousel container */
     height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Ensure images are displayed as inline-block elements */
+    vertical-align: top; /* Align images to the top */
+    animation: carouselAnimation 40s linear infinite; /* Adjust the duration (10s) and timing function (linear) as needed */
 }
+
 
 /* PROJECTS SECTION STYLES */
 
