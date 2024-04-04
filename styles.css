@@ -8,6 +8,7 @@
 body {
     font-family: 'Poppins', sans-serif; /* Apply Poppins font */
     background-color: #fbf3d3;
+    margin: 0; /* Remove default body margin */
 }
 
 /* Header styles */
@@ -18,11 +19,13 @@ body {
     padding: 20px;
     background-color: #c4c484;
     color: #000;
+    position: fixed;
+    width: 100%; /* Make the header full width */
+    z-index: 1000; /* Ensure the header is above other content */
+    top: 0; /* Ensure the header sticks to the top */
 }
 
 /* Add other styles */
-
-
 
 .logo {
     display: flex;
@@ -93,6 +96,7 @@ body {
 /* Section styles */
 .section {
     padding: 50px;
+    margin-top: 100px; /* Adjust margin to avoid content being overlapped by header */
 }
 
 .section-title {
@@ -114,6 +118,9 @@ h2.section-title {
     color: #000;
     text-align: center;
     padding: 20px;
+    position: relative; /* Remove fixed position */
+    width: 100%; /* Make the footer full width */
+    margin-top: 100px; /* Adjust margin to avoid content being overlapped by footer */
 }
 
 /* Hamburger menu styles */
@@ -139,15 +146,20 @@ h2.section-title {
     background-color: #c4c484; /* Sidebar background color */
     color: #000; /* Sidebar text color */
     position: fixed;
-    top: 95px; /* Adjust top position according to your header height */
-    bottom: 50px; /* Adjust bottom position according to your footer height */
+    top: 100px; /* Adjust top position according to your header height */
+    bottom: 0; /* Change to bottom 0 */
     left: 0;
     overflow-y: auto;
+    height: calc(100vh - 100px); /* Set aside height to fill remaining viewport */
 }
 
 /* Hide scrollbar for WebKit browsers */
 .aside::-webkit-scrollbar {
     display: none;
+}
+
+.aside-heading {
+    padding: 10px 20px; /* Match the padding with the navigation links */
 }
 
 .aside-nav {
@@ -163,13 +175,14 @@ h2.section-title {
     color: #000;
     font-weight: bold;
     display: block;
-    padding: 10px 0;
+    padding: 10px 20px; /* Match the padding with the heading */
 }
 
 .aside-link:hover {
     background-color: #fbf3d3; /* Hover background color */
     color: #768e1f;
 }
+
 
 /* Main content styles */
 .main-content {
@@ -185,7 +198,6 @@ h2.section-title {
     text-align: center;
 }
 
-/* Adjust font sizes */
 .home-container p {
     font-size: 1.2em; /* Adjust the font size of paragraphs */
 }
@@ -201,6 +213,24 @@ h2.section-title {
     margin-right: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .home-container {
+        flex-direction: column;
+    }
+
+    .home-container img {
+        margin: 0 0 10px 0;
+    }
+}
 
 /* ABOUT SECTION STYLES */
 .about-container {
@@ -246,6 +276,20 @@ h2.section-title {
 .about-details-container:hover,
 .about-goals-container:hover {
     transform: translateY(-5px) scale(1.05); /* Scale up and move up slightly */
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Change flex-direction to column */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .about-image {
+        margin-right: 0; /* Remove right margin from image */
+        margin-bottom: 20px; /* Add bottom margin between image and text */
+    }
 }
 
 /* AFFILIATIONS SECTIONS STYLES */
@@ -476,7 +520,7 @@ h2.skills-title {
     height: auto; /* Maintain aspect ratio */
     display: inline-block; /* Ensure images are displayed as inline-block elements */
     vertical-align: top; /* Align images to the top */
-    animation: carouselAnimation 40s linear infinite; /* Adjust the duration (10s) and timing function (linear) as needed */
+    animation: carouselAnimation 50s linear infinite; /* Adjust the duration (10s) and timing function (linear) as needed */
 }
 
 
@@ -535,6 +579,48 @@ h2.skills-title {
 /* Add hover effect */
 .project-item:hover {
     transform: translateY(-5px); /* Move the container up */
+}
+
+/* WORK PHILOSOPHY */
+
+.work-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.work-image {
+    margin-right: 20px; /* Add margin between image and text */
+}
+
+.work-image img {
+    height: 400px;
+    width: 250px;
+}
+
+.work-text {
+    max-width: 600px; /* Adjust the max-width as needed */
+}
+
+.work-container:hover {
+    transform: translateY(-5px) scale(1.05); /* Scale up and move up slightly */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .work-container {
+        flex-direction: column-reverse; /* Reverse the order of elements on smaller screens */
+    }
+
+    .work-image {
+        margin-bottom: 0; /* Remove margin between image and text */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .work-text {
+        margin-bottom: 20px; /* Add margin between text and image */
+    }
 }
 
 /* AWARDS SECTION STYLES */
