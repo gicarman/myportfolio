@@ -709,11 +709,67 @@ h2.learning-title {
     text-align: center;
 }
 
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two containers per row */
+    gap: 20px; /* Space between the containers */
+}
+
+.course-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: #000;
+}
+
+.course-item img {
+    width: 80%; /* Ensure the image fills the container */
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Add transition effect */
+    max-width: 100%; /* Set maximum width */
+    max-height: 100%; /* Set maximum height */
+}
+
+.course-item img:hover {
+    transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+.course-item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.course-item p {
+    margin-top: 5px;
+}
+
+.course-item a {
+    display: block;
+    margin-top: 10px;
+}
+
+.view-full-image-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #768e1f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-full-image-btn:hover {
+    background-color: #657a1a;
+    color: #fff;
+}
+
 /* EVALUATION SECTION STYLES */
 
 
 /* CONTACT SECTION STYLES */
-
 #contact {
     text-align: center;
 }
