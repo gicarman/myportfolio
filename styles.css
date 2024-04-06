@@ -598,6 +598,7 @@ h2.skills-title {
 .work-image img {
     height: 400px;
     width: 250px;
+    border-radius: 10px;
 }
 
 .work-text {
@@ -643,6 +644,7 @@ h2.skills-title {
 .photo img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 .caption {
@@ -653,6 +655,7 @@ h2.skills-title {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .caption h3 {
