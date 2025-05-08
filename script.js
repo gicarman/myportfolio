@@ -1,9 +1,4 @@
-// Hamburger menu toggle
-document.getElementById('hamburger').addEventListener('click', function () {
-    var navList = document.getElementById('nav-list');
-    navList.classList.toggle('active');
-});
-
+// Hamburger
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
@@ -11,15 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     
     hamburger.addEventListener('click', function() {
-        // Toggle active class for navigation
+        // Toggle active classes
+        hamburger.classList.toggle('active');
         nav.classList.toggle('active');
         
-        // Toggle hamburger animation
-        hamburger.classList.toggle('active');
-        
-        // Toggle navigation position
+        // Make sure nav list is visible when menu is active
         if (nav.classList.contains('active')) {
             nav.style.left = '0';
+            navList.style.display = 'flex';
         } else {
             nav.style.left = '-100%';
         }
