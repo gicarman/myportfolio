@@ -197,6 +197,52 @@ body {
         padding: 12px 30px;
         font-size: 1rem;
     }
+
+
+/* Direct CSS fix for hamburger positioning */
+header, .header {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px 20px !important;
+  }
+  
+  .hamburger {
+    position: relative !important;
+    right: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
+    align-self: center !important;
+    display: block !important;
+  }
+  
+  body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .nav, nav {
+    position: fixed;
+    top: 80px; /* Adjust based on your header height */
+    width: 100%;
+    left: -100%; /* Hidden by default */
+    transition: left 0.3s ease;
+  }
+  
+  .nav.active, nav.active {
+    left: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .menu-toggle-container, .hamburger-container, .navbar-toggle {
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
     
     /* Hamburger animation */
     .hamburger.active .hamburger-line:nth-child(1) {
@@ -215,7 +261,7 @@ body {
 /* Section styles */
 .section {
     padding: 50px;
-    margin-top: 100px; /* Adjust margin to avoid content being overlapped by header */
+    margin-top: 100px; 
 }
 
 .section-title {
@@ -999,7 +1045,7 @@ h2.section-title {
 
 /* RESOURCES SECTION STYLES */
 #resources {
-    padding: 3rem 1.5rem; /* Added horizontal padding */
+    padding: 3rem 1.5rem;
     background-color: #f9f9f9;
 }
 
@@ -1088,10 +1134,140 @@ h2.section-title {
     font-size: 0.9rem;
     font-weight: 500;
     transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
 .resource-btn:hover {
     background-color: #5a6c17;
+}
+
+/* Certificate Modal Styles */
+.cert-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cert-modal-content {
+    width: 85%;
+    height: 85%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cert-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #ddd;
+}
+
+.cert-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.cert-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.zoom-btn, .close-btn {
+    background: #768e1f;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+}
+
+.close-btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.zoom-btn {
+    font-weight: bold;
+}
+
+.close-btn {
+    font-size: 24px;
+}
+
+.zoom-btn:hover, .close-btn:hover {
+    background-color: #5a6c17;
+    
+}
+
+.close-btn:hover {
+    background-color: #f44336;
+    color: white;
+    border-color: #f44336;
+}
+
+.cert-modal-body {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+
+.cert-container:active {
+    cursor: grabbing;
+}
+
+#certImage {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.2s ease;
+    transform-origin: center;
+    user-select: none;
 }
 
 /* Responsive Design */
@@ -1099,26 +1275,49 @@ h2.section-title {
     .resources-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .cert-modal-content {
+        width: 90%;
+        height: 80%;
+    }
 }
 
 @media (max-width: 768px) {
     #resources {
-        padding: 2rem 1rem; /* Adjusted padding for tablets */
+        padding: 2rem 1rem;
     }
     
     .resources-category {
         margin-bottom: 2rem;
     }
+    
+    .cert-modal-content {
+        width: 95%;
+        height: 75%;
+    }
+    
+    .cert-modal-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .cert-title {
+        font-size: 1.1rem;
+    }
+    
+    .zoom-btn, .close-btn {
+        width: 28px;
+        height: 28px;
+    }
 }
 
 @media (max-width: 576px) {
     #resources {
-        padding: 1.5rem 1.25rem; /* Increased horizontal padding for mobile */
+        padding: 1.5rem 1.25rem;
     }
     
     .resources-grid {
         grid-template-columns: 1fr;
-        gap: 1.25rem; /* Slightly reduced gap for better mobile layout */
+        gap: 1.25rem;
     }
     
     .resource-image {
@@ -1126,17 +1325,41 @@ h2.section-title {
     }
     
     .resource-card {
-        margin: 0 0.5rem; /* Added horizontal margin to cards */
-        max-width: calc(100% - 1rem); /* Ensure cards don't overflow container */
+        margin: 0 0.5rem;
+        max-width: calc(100% - 1rem);
     }
     
     .resource-info {
-        padding: 1rem; /* Slightly reduced padding for better proportions */
+        padding: 1rem;
     }
     
     .category-title {
-        font-size: 1.3rem; /* Slightly smaller title on mobile */
+        font-size: 1.3rem;
         margin-bottom: 1.25rem;
+    }
+    
+    .cert-modal-content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    
+    .cert-modal-header {
+        padding: 0.5rem 0.85rem;
+    }
+    
+    .cert-title {
+        font-size: 1rem;
+    }
+    
+    .zoom-btn, .close-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+    }
+    
+    .close-btn {
+        font-size: 20px;
     }
 }
 
@@ -2092,7 +2315,6 @@ h2.section-title {
         margin-left: 0; /* Reset margin-left for main content */
     }
 }
-
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
