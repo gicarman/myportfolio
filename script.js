@@ -213,3 +213,146 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Certificate Viewer Modal
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('certModal');
+    const certImage = document.getElementById('certImage');
+    const closeBtn = document.getElementById('closeModal');
+    const zoomInBtn = document.getElementById('zoomIn');
+    const zoomOutBtn = document.getElementById('zoomOut');
+    const certContainer = document.getElementById('certContainer');
+    const viewBtns = document.querySelectorAll('.view-cert-btn');
+    
+    // Current zoom level
+    let scale = 1;
+    let isDragging = false;
+    let startX, startY, translateX = 0, translateY = 0;
+    
+    // Open modal when View Certificate button is clicked
+    viewBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const certPath = this.closest('.resource-card').getAttribute('data-cert');
+            certImage.src = certPath;
+            certImage.style.transform = 'scale(1)';
+            scale = 1;
+            translateX = 0;
+            translateY = 0;
+            updateCertTransform();
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+    });
+    
+    // Close modal when X button is clicked
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+    
+    // Close modal when clicking outside the content
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+    });
+    
+    // Zoom functionality
+    zoomInBtn.addEventListener('click', function() {
+        if (scale < 2) {
+            scale += 0.1;
+            updateCertTransform();
+        }
+    });
+    
+    zoomOutBtn.addEventListener('click', function() {
+        if (scale > 0.5) {
+            scale -= 0.1;
+            updateCertTransform();
+        }
+    });
+    
+    // Update transform for zoom and pan
+    function updateCertTransform() {
+        certImage.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+    }
+    
+    // Drag functionality
+    certContainer.addEventListener('mousedown', startDrag);
+    certContainer.addEventListener('touchstart', startDrag, { passive: false });
+    
+    function startDrag(e) {
+        e.preventDefault();
+        isDragging = true;
+        
+        if (e.type === 'mousedown') {
+            startX = e.clientX;
+            startY = e.clientY;
+        } else if (e.type === 'touchstart') {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        }
+        
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('touchmove', drag, { passive: false });
+        document.addEventListener('mouseup', stopDrag);
+        document.addEventListener('touchend', stopDrag);
+    }
+    
+    function drag(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        
+        let currentX, currentY;
+        if (e.type === 'mousemove') {
+            currentX = e.clientX;
+            currentY = e.clientY;
+        } else if (e.type === 'touchmove') {
+            currentX = e.touches[0].clientX;
+            currentY = e.touches[0].clientY;
+        }
+        
+        const dx = (currentX - startX) / scale;
+        const dy = (currentY - startY) / scale;
+        
+        translateX += dx;
+        translateY += dy;
+        
+        updateCertTransform();
+        
+        startX = currentX;
+        startY = currentY;
+    }
+    
+    function stopDrag() {
+        isDragging = false;
+        document.removeEventListener('mousemove', drag);
+        document.removeEventListener('touchmove', drag);
+        document.removeEventListener('mouseup', stopDrag);
+        document.removeEventListener('touchend', stopDrag);
+    }
+    
+    // Mouse wheel zoom
+    certContainer.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        
+        if (e.deltaY < 0 && scale < 2) {
+            // Zoom in
+            scale += 0.1;
+        } else if (e.deltaY > 0 && scale > 0.5) {
+            // Zoom out
+            scale -= 0.1;
+        }
+        
+        updateCertTransform();
+    });
+    
+    // Handle keyboard events (ESC to close)
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+    });
+});
