@@ -563,39 +563,107 @@ h2.section-title {
         text-align: center;
         height: auto;
         padding: 40px 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 0;
+    }
+    
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .hero-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
     }
     
     .hero-image img {
-        max-height: 60vh;
-        max-width: 100%;
+        max-height: 50vh;
+        max-width: 90%;
+        margin: 0 auto;
     }
     
     .hero-content h1 {
-        font-size: 2.5em;
+        font-size: 2.2em;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-description {
+        width: 100%;
+        text-align: center;
+        font-size: 1.1em;
     }
     
     .hero-cta {
         justify-content: center;
+        width: 100%;
+    }
+    
+    .typing-text {
+        display: inline-block;
+        margin: 0 auto;
     }
 }
 
-@media only screen and (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8em;
     }
+    
+    .hero-intro {
+        font-size: 1.1em;
+    }
+    
+    .hero-description {
+        font-size: 1em;
+    }
+    
+    .hero-image img {
+        max-height: 40vh;
+    }
+    
+    .cta-button, .cta-button-outline {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    .hero-cta {
+        gap: 10px;
+    }
+}
 
-    .nav-links {
-        margin-top: 10px;
-    }
+/* ABOUT SECTION STYLES */
+.about-section {
+    padding: 80px 0;
+    background-color: #fbfbfb;
+}
 
-    .home-container {
-        flex-direction: column;
-    }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    .home-container img {
-        margin: 0 0 10px 0;
-    }
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d2d2d;
+    margin-bottom: 60px;
+    position: relative;
 }
 
 /* ABOUT SECTION STYLES */
