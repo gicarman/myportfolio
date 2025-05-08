@@ -13,7 +13,6 @@ body {
 }
 
 /* Header styles */
-/* Header styles */
 .header {
     display: flex;
     justify-content: space-between;
@@ -160,37 +159,43 @@ body {
         height: calc(100vh - 80px);
         background-color: #c4c484;
         flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
         padding: 30px 0;
         transition: all 0.4s ease;
         overflow-y: auto;
+        z-index: 1000;
+    }
+    
+    .nav.active {
+        left: 0;
     }
     
     .nav-list {
         flex-direction: column;
         width: 100%;
         margin-bottom: 30px;
+        display: flex !important; /* Force display */
+        padding: 0;
     }
     
     .nav-item {
         margin: 12px 0;
         width: 100%;
         text-align: center;
+        display: block;
     }
     
     .nav-link {
         display: block;
-        padding: 10px 0;
+        padding: 15px 0;
         font-size: 1.2rem;
     }
     
     .cv-btn {
-        margin: 10px 0 0 0;
+        margin: 20px 0 0 0;
         padding: 12px 30px;
         font-size: 1rem;
-    }
-    
-    .nav-list.active {
-        left: 0;
     }
     
     /* Hamburger animation */
