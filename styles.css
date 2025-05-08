@@ -1038,8 +1038,8 @@ h2.section-title {
 
 /* RESOURCES SECTION STYLES */
 #resources {
-    padding: 3rem 0;
-    background-color: #f9f9f9
+    padding: 3rem 1.5rem; /* Added horizontal padding */
+    background-color: #f9f9f9;
 }
 
 .resources-container {
@@ -1140,13 +1140,42 @@ h2.section-title {
     }
 }
 
+@media (max-width: 768px) {
+    #resources {
+        padding: 2rem 1rem; /* Adjusted padding for tablets */
+    }
+    
+    .resources-category {
+        margin-bottom: 2rem;
+    }
+}
+
 @media (max-width: 576px) {
+    #resources {
+        padding: 1.5rem 1.25rem; /* Increased horizontal padding for mobile */
+    }
+    
     .resources-grid {
         grid-template-columns: 1fr;
+        gap: 1.25rem; /* Slightly reduced gap for better mobile layout */
     }
     
     .resource-image {
         height: 160px;
+    }
+    
+    .resource-card {
+        margin: 0 0.5rem; /* Added horizontal margin to cards */
+        max-width: calc(100% - 1rem); /* Ensure cards don't overflow container */
+    }
+    
+    .resource-info {
+        padding: 1rem; /* Slightly reduced padding for better proportions */
+    }
+    
+    .category-title {
+        font-size: 1.3rem; /* Slightly smaller title on mobile */
+        margin-bottom: 1.25rem;
     }
 }
 
