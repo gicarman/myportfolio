@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gian's Portfolio</title>
+    <title>Gian Manuel | Web Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/site_icon_gm.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...your-sha-hash..." crossorigin="anonymous" />
@@ -31,7 +31,7 @@
                     <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                <a href="assets/gianmanuel_cv.pdf" download="CV Gian Manuel">
+                <a href="assets/gianmanuel_resume.pdf" download="CV Gian Manuel">
                     <button class="cv-btn"><b>Download CV</b></button>
                 </a>
             </nav>
@@ -43,20 +43,18 @@
             </button>
         </header>
 
+
         <aside class="aside">
-            <h2 class="aside-heading">Contents</h2>
+            
             <nav class="aside-nav">
                 <ul class="aside-list" id="aside-list">
                     <li><a href="#home" class="aside-link">Home</a></li>
                     <li><a href="#about" class="aside-link">About</a></li>
-                    <li><a href="#professional-affiliations" class="aside-link">Affiliations</a></li>
                     <li><a href="#skills" class="aside-link">Skills</a></li>
                     <li><a href="#projects" class="aside-link">Projects</a></li>
-                    <li><a href="#statement-of-work-philosophy" class="aside-link">Work Philosophy</a></li>
                     <li><a href="#honors-and-awards" class="aside-link">Awards</a></li>
-                    <li><a href="#student-learning" class="aside-link">Student Learning</a></li>
-                    <li><a href="#evaluations" class="aside-link">Evaluations</a></li>
-                    <li><a href="#contact" class="aside-link">Contact</a></li>
+                    <li><a href="#resources" class="aside-link">Resources</a></li>
+                    <li><a href="#contact" class="aside-link">Contact</a></li>                    
                 </ul>
             </nav>
         </aside>
@@ -64,156 +62,394 @@
 
             <main class="main-content">
     
-<section id="home" class="section">
-    <div class="home-container">
-        <img src="assets/home-photo-update.jpg" alt="Gian Carlo Manuel's Photo">
-        <div class="text-container">
-            <p>Hello! I am</p>
-            <h1>Gian Carlo Manuel</h1>
-            <p>A Web Development Student</p>
+                <section id="home" class="section hero-section">
+                    <div class="hero-container">
+                        <div class="hero-content">
+                            <div class="text-container">
+                                <p class="hero-intro">Hello! I am</p>
+                                <h1><span class="typing-text">Gian Carlo Manuel</span></h1>
+                                <p class="hero-description">Aspiring Web & UI/UX Designer. <br><i>Designing with heart, driven by art and imagination.</i></p>
+                                <div class="hero-cta">
+                                    <a href="#about" class="cta-button">Learn More</a>
+                                    <a href="#contact" class="cta-button-outline">Contact Me</a>
+                                </div>
+                            </div>
+                            <div class="hero-image">
+                                <img src="assets/home-photo-green.png" alt="Gian Manuel's Photo">
+                            </div>
+                        </div>
+                    </div>
+                </section>               
+
+            
+<section id="about" class="section about-section">
+    <div class="container">
+        <h2 class="section-title">Get To Know Me</h2>
+        
+        <!-- Main about container with image and intro -->
+        <div class="about-hero">
+            <div class="about-image-container">
+                <img src="assets/about.png" alt="Gian Manuel's Photo">
+                <div class="image-accent"></div>
+            </div>
+            
+            <div class="about-intro">
+                <div class="intro-header">
+                    <span class="accent-line"></span>
+                    <h3>Work to learn new things.</h3>
+                </div>
+                
+                <div class="about-text">
+                    <p>Hi, I'm Gian, 22 years old, and an aspiring web designer. I'm here to showcase my passion for web design, which allows me to bring my imagination to life. Designing excites me, and I love creating visually appealing, functional experiences. I'm a huge fan of all forms of art, including music, film, photography, design, and nature. Art calms my soul and gives me the energy to get through each day. (Yup!)</p>
+                    
+                    <p>I hold a bachelor's degree in Information Technology, specializing in Web Development. Through various projects and activities, I've built a foundation in HTML, CSS, and JavaScript, which has set the stage for my growth in web development and design.</p>
+                    
+                    <p>I'm excited to continue exploring new opportunities and challenges in web design and UI/UX design, with a focus on the design and development phases. My passion for graphic design, multimedia, photography, and videography fuels my drive to create stunning and functional digital experiences.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-cards">
+            <div class="info-card goals-card">
+                <div class="card-header">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>Personal Values & Goals</h3>
+                </div>
+                <div class="card-content">
+                    <ul class="goals-list">
+                        <li><i class="fa-solid fa-check"></i> Never stop learning and discovering.</li>
+                        <li><i class="fa-solid fa-check"></i> Stay focused, mindful, and open to change.</li>
+                        <li><i class="fa-solid fa-check"></i> Sharpen my craft and grow as a professional.</li>
+                        <li><i class="fa-solid fa-check"></i> Live a balanced, meaningful, and creative life.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-card work-philosophy-card">
+                <div class="card-header">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Work Philosophy</h3>
+                </div>
+                <div class="card-content">
+                    <div class="work-philosophy-text">
+                        <p>Working helps me gain experience and show what I can do. It's a way for me to turn ideas into something creative and meaningful.</p>
+                    </div>
+                    
+                    <div class="philosophy-points">
+                        <div class="philosophy-point" id="point-1">
+                            <div class="point-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="point-content">
+                                <h4>Creative Growth</h4>
+                                <p>Building my character as I go, learning with others.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="philosophy-point" id="point-2">
+                            <div class="point-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="point-content">
+                                <h4>Professional Respect</h4>
+                                <p>Doing my best to meet expectations with professionalism and respect.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="philosophy-point" id="point-3">
+                            <div class="point-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="point-content">
+                                <h4>Embracing Change</h4>
+                                <p>I stay committed, welcome change, and always aim to contribute quality work.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="philosophy-footer">
+                        <p>I'm excited to share what I can with the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            
+            <div class="skills-wrapper">
+                <!-- Technical Development Section -->
+                <div class="skills-col">
+                    <div class="skills-category">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Technical / Development</h3>
+                        </div>
+                        
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>HTML</h4>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress1"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>CSS</h4>
+                                    <span class="skill-percentage">65%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress2"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>WordPress</h4>
+                                    <span class="skill-percentage">55%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress3"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>SEO Basics</h4>
+                                    <span class="skill-percentage">40%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress4"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <h4>JavaScript</h4>
+                                    <span class="skill-percentage">35%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Design Tools Column -->
+                <div class="skills-col">
+                    <!-- Design Tools Section -->
+                    <div class="skills-category design-tools-section">
+                        <div class="category-header">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>Design Tools</h3>
+                        </div>
+                        
+                        <div class="design-tools">
+                            <div class="tool-item">
+                                <div class="tool-icon">
+                                    <img src="assets/skills/canvalogo.png" alt="Canva Logo">
+                                </div>
+                                <h4>Canva</h4>
+                            </div>
+                            
+                            <div class="tool-item">
+                                <div class="tool-icon">
+                                    <img src="assets/skills/capcutlogo.png" alt="Capcut Logo">
+                                </div>
+                                <h4>Capcut</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Currently Learning Section -->
+                    <div class="skills-category learning-section">
+                        <div class="category-header">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Currently Learning</h3>
+                        </div>
+                        
+                        <div class="learning-tools">
+                            <div class="tool-item learning-item">
+                                <div class="tool-icon">
+                                    <img src="assets/skills/pslogo.png" alt="Adobe Photoshop Logo">
+                                </div>
+                                <h4>Photoshop</h4>
+                            </div>
+                            
+                            <div class="tool-item learning-item">
+                                <div class="tool-icon">
+                                    <img src="assets/skills/ailogo.png" alt="Adobe Illustrator Logo">
+                                </div>
+                                <h4>Illustrator</h4>
+                            </div>
+                            
+                            <div class="tool-item learning-item">
+                                <div class="tool-icon">
+                                    <img src="assets/skills/figmalogo.png" alt="Figma Logo">
+                                </div>
+                                <h4>Figma</h4>
+                            </div>
+                            
+                            <div class="tool-item learning-item">
+                                <div class="tool-icon">
+                                    <img src="assets/skills/prlogo.png" alt="Adobe Premiere Pro Logo">
+                                </div>
+                                <h4>Premiere Pro</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    
+    <h2 class="skills-title">Course Projects</h2>
+    <!-- Projects Container -->
+    <div class="projects-container">
+        <!-- Course Projects -->
+        <div class="project-item">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/projects/proj1.png" alt="RiskEscape">
+                    <div class="project-overlay">
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>RiskEscape: Disaster Preparedness Web App</h3>
+                    <p>Group Project</p>
+                    <p>Luoang, Manabat, Manuel & Santos (2025)</p>
+                    <a href="https://riskescape.com" class="project-link" target="_blank">View</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/projects/proj2.png" alt="Wear Potential">
+                    <div class="project-overlay">
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Wear Potential</h3>
+                    <p>Group Project for Web Search Engine Optimization and Analytics</p>
+                    <p>Luoang, Macam, Manabat & Manuel (2023-24)</p>
+                    <a href="https://wearpotential.com/" class="project-link" target="_blank">View Project</a>
+                    <a href="assets/projects/WearPotential.pdf" class="project-link" target="_blank">Overview</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/projects/proj3.png" alt="FlawlessFindings">
+                    <div class="project-overlay">
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>FlawlessFindings</h3>
+                    <p>Group Project</p>
+                    <p>Aquino, Luoang, Manabat & Manuel (2024)</p>
+                    <a href="assets/projects/FlawlessFindings-UserManual.pdf" class="project-link" target="_blank">Overview</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/projects/proj4.png" alt="FlawlessFindings">
+                    <div class="project-overlay">
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>archives by gian</h3>
+                    <p>WordPress Blog</p>
+                    <p>Manuel</p>
+                    <a href="https://sunsoutarchives.wordpress.com" class="project-link" target="_blank">Overview</a>
+                </div>
+            </div>
         </div>
     </div>
     
-</section>
+    <h2 class="skills-title">Mockup Wireframes</h2>
+    <div class="projects-container">
+        <div class="project-item">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/projects/wireframe1.png" alt="Wireframe 1">
+                    <div class="project-overlay">
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Disaster Preparedness Web App</h3>
+                    <p>Wireframe</p>
+                    <a href="assets/projects/Wireframe-1.pdf" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
 
-<section id="about" class="section">
-    <h2 class="section-title">Get To Know Me</h2>
-    <div class="about-container">
-        <div class="about-image">
-            <img src="assets/grad-pic.jpg" alt="Gian Manuel Graduation Photo">
+        <div class="project-item">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/projects/wireframe2.png" alt="Wireframe 2">
+                    <div class="project-overlay">
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Barangay SK Management</h3>
+                    <p>Wireframe</p>
+                    <a href="assets/projects/Wireframe-2.pdf" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
         </div>
-        <div class="about-text">
-            <p>Hi, I'm Gian Carlo E. Manuel. I'm 21 years old and a web developer in the making. I'm here to showcase my talent and love for web.
-                Well, mostly, in the front-end side. I really love designing stuff. It makes me bring out the best of my imagination.</p> </br>
-            <p>I love art. From music, film, photography, artworks, nature, etc. Art in general is just mind-blowing. It calms my soul and gives me the energy that gets me through the day and life (yup).</p></br>
-            <p>I'm currently pursuing a degree in Information Technology majoring in Web Development. 
-                We have created projects and activities that span different areas of programming. This includes HTML and CSS, JavaScript and its frameworks,
-                Java, and Python. These formed a foundation to further enhance my knowledge and skills in the world of development.</p></br>
-            <p> I'm elated to explore and learn new things in this wonderful field of web development</p>
-        </div>
-    </div></br>
-    <div class="about-container-2">
-        <div class="about-details-container">
-            <h3><i class="fas fa-user"></i> Personal Details</h3></br>
-            <p><b>Name</b>: Gian Carlo E. Manuel</p>
-            <p><b>Date of Birth</b>: February 11, 2003</p>
-            <p><b>Address</b>: Calulut, San Fernando, Pampanga</p>
-            <p><b>Course</b>: Bachelor of Science in Information Technology with Area of Specialization in Web Development</p>
-            <p><b>University</b>: Holy Angel University</p>
-        </div>
-        <div class="about-goals-container">
-            <h3><i class="fa-solid fa-seedling"></i> Statement of Student's Goals</h3></br>
-          
-                <p><i class="fa-solid fa-check"></i> Acquire new lessons that I can apply to improve life.</p>
-                <p><i class="fa-solid fa-check"></i> Always try and discover new things.</p>
-                <p><i class="fa-solid fa-check"></i> Try to be focused and have a clear mindset and well-being.</p>
-                <p><i class="fa-solid fa-check"></i> Improve and sharpen my skills.</p>
-                <p><i class="fa-solid fa-check"></i> Gain freedom to everything I will do.</p>
-                <p> <i class="fa-solid fa-check"></i> A peaceful and ideal life.</p>
-        </div>
-    </div></br>
-    <div class="additional-container">
-        <h3><i class="fa-solid fa-lightbulb"></i> Philosophy of Education</h3></br>
-        <p>As Nelson Mandela’s quote says “Education is the most powerful weapon which you can use to change the world”. Education is indeed a weapon that you can shield into your existence here. Education for me is a gift that no one will ever take away from you because you earned that thing. You worked tirelessly day and night to review your lessons and finish your schoolwork. That’s a thing that we aim for because we want to achieve something in love. We have a goal that we are working hard to reach. Dreams seem impossible but if you close enough, in the blink of an eye, it’s right in our eyes.</p></br>
 
-        <p>Education is a broad thing that is astonishing to see. It brings out the best of us. It will let us realize that each one of us has a different perception of something. And that’s okay. It will let us realize that there is a deeper meaning to something if we think it through. One thing can lead to a thousand possible realities. We learn new things every day. We acquire things that we see and hear from other people. I don’t fear change. If that’s a thing that will make me a better person, I will gladly embrace it. Through learning, I can express myself, think brighter and broader, realize something that I never knew before, make me stronger, and positively see that the future is bright because every new learning is a blessing. Not only for me but for all of us.</p></br>
+        <div class="project-item">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/projects/wireframe3.png" alt="Wireframe 3">
+                    <div class="project-overlay">
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Mental Health Advocacy</h3>
+                    <p>Wireframe</p>
+                    <a href="assets/projects/Wireframe-3.pdf" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
 
-        <p><b><i>As said, change is constant. We should let our imaginations run wild. Live with an open mind and open heart and lots of hope. And finally see the endless possibilities of life.</b></i></p>
+        <div class="project-item">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/projects/wireframe4.png" alt="Wireframe 4">
+                    <div class="project-overlay">
+                    </div>
+                </div>
+                <div class="project-details">
+                    <h3>Language Learning</h3>
+                    <p>Wireframe</p>
+                    <a href="assets/projects/Wireframe-4.pdf" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-</section>
-
-<section id="professional-affiliations" class="section">
-    <h2 class="section-title">Professional Affiliations</h2>
-    <div class="affiliations-container">
-        <div class="affiliation-item">
-            <img src="assets/affiliations/Manuel_CG.png" alt="Code Geeks Certificate">
-            <h3>Code Geeks</h3>
-            <p>Membership Certificate</p>
-            <a href="assets/affiliations/Manuel_CG.png" class="full-image-btn" target="_blank">View Full Image</a>
-        </div>
-        <div class="affiliation-item">
-            <img src="assets/affiliations/Manuel_Cisco.png" alt="Cisco Certificate">
-            <h3>Cisco Networking Academy</h3>
-            <p>Introduction to Cybersecurity</p>
-            <a href="assets/affiliations/Manuel_Cisco.png" class="full-image-btn" target="_blank">View Full Image</a>
-        </div>
-        <div class="affiliation-item">
-            <img src="assets/affiliations/Manuel_GA4.png" alt="GA4 Certificate">
-            <h3>Google Analytics (GA4)</h3>
-            <p>Certification of Completion</p>
-            <a href="assets/affiliations/Manuel_GA4.png" class="full-image-btn" target="_blank">View Full Image</a>
-        </div>
-        <div class="affiliation-item">
-            <img src="assets/affiliations/Manuel_RedHat.png" alt="RedHat Academy Certificate">
-            <h3>RedHat Academy</h3>
-            <p>Certificate of Attendance</p>
-            <a href="assets/affiliations/Manuel_RedHat.png" class="full-image-btn" target="_blank">View Full Image</a>
-        </div>
-</section>
-
-<section id="skills" class="section">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-container">
-        <h2 class="skills-title">Programming & Development Tools</h2></br>
-        <h3>HTML/CSS</h3>
-        <div class="progress-bar">
-            <div class="progress" id="progress1"></div>
-        </div>
-    </div>
-    <div class="skills-container">
-        <h3>Java</h3>
-        <div class="progress-bar">
-            <div class="progress" id="progress2"></div>
-        </div>
-    </div>
-    <div class="skills-container">
-        <h3>Python</h3>
-        <div class="progress-bar">
-            <div class="progress" id="progress3"></div>
-        </div>
-    </div>
-    <div class="skills-container">
-        <h3>PHP</h3>
-        <div class="progress-bar">
-            <div class="progress" id="progress4"></div>
-        </div>
-    </div>
-    <div class="skills-container">
-        <h3>JavaScript</h3>
-        <div class="progress-bar">
-            <div class="progress" id="progress5"></div>
-        </div>
-    </div>
-    <div class="skills-container">
-        <h3>SQL / NoSQL</h3>
-        <div class="progress-bar">
-            <div class="progress" id="progress6"></div>
-        </div>
-    </div></br>
-
-    <h2 class = "skills-title">Other Specific Skills</h2></br>
-     <div class="images-container">
-        <div class="image-item">
-            <img src="assets/skills/canvalogo.png" alt="Canva Logo">
-            <h3>Canva</h3>
-        </div>
-        <div class="image-item">
-            <img src="assets/skills/capcutlogo.png" alt="Capcut Logo">
-            <h3>Capcut</h3>
-        </div>
-        <div class="image-item">
-            <img src="assets/skills/pslogo.png" alt="Adobe Photoshop Logo">
-            <h3>Adobe Photoshop</h3>
-        </div>
-        <div class="image-item">
-            <img src="assets/skills/ailogo.png" alt="Adobe Illustrator Logo">
-            <h3>Adobe Illustrator</h3>
-        </div>
-    </div></br>
-
-    <h2 class = "skills-title">Sample Works</h2></br>
-    <div class="carousel"></br>
+    <!-- Other Works Section -->
+    <h2 class="skills-title">Other Works</h2>
+    <div class="carousel">
         <div><img src="assets/skills/1.png" alt="CD and Vinyl Mockup"></div>
         <div><img src="assets/skills/2.png" alt="Tour Mockup Poster"></div>
         <div><img src="assets/skills/3.png" alt="Gian Manuel's Personal Logo"></div>
@@ -227,183 +463,241 @@
         <div><img src="assets/skills/11.png" alt="SpeakSharp Branding Kit"></div>
         <div><img src="assets/skills/12.png" alt="Star Comics"></div>
         <div><img src="assets/skills/13.png" alt="SpeakSharp Design"></div>
-    </div>
-    </div>
-</section>
-
-<section id="projects" class="section">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-container">
-        <div class="project-item">
-            <img src="assets/projects/ffss.png" alt="Project 1">
-            <div class="project-details">
-                <h3>Flawless Findings</h3>
-                <p>Course: 6ADVDBASE - Advanced Database Systems</p>
-                <p>Date: November 2023</p>
-                <a href="assets/projects/FlawlessFinding User Manual.pdf" class="project-link" target="_blank">View Project</a>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="assets/projects/wpss.png" alt="Project 2">
-            <div class="project-details">
-                <h3>Wear Potential</h3>
-                <p>Course: 6WEBSEA - Web Search Engine Optimization and Analytics</p>
-                <p>Date: November 2023</p>
-                <a href="https://wearpotential.com/" class="project-link" target="_blank">View Project</a>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="assets/projects/rrss.png" alt="Project 3">
-            <div class="project-details">
-                <h3>Read Rover</h3>
-                <p>Course: 6ASI - Application and Systems Integration</p>
-                <p>Date: November 2023</p>
-                <a href="https://asi-workspace.bitbucket.io/" class="project-link" target="_blank">View Project</a>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="assets/projects/speakss.png" alt="Project 4">
-            <div class="project-details">
-                <h3>Speak Sharp</h3>
-                <p>Course: 6INFOMAN - Information Management</p>
-                <p>Date: May 2023</p>
-                <a href="assets/projects/Infoman_Finals.pdf" class="project-link" target="_blank">View Project</a>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="assets/projects/abgss.png" alt="Project 5">
-            <div class="project-details">
-                <h3>archives by gian</h3>
-                <p>Course: 6DWEBTOOLS - Dynamic Web Applications and Development Tools</p>
-                <p>Date: March 2023</p>
-                <a href="https://sunsoutarchives.wordpress.com/" class="project-link" target="_blank">View Project</a>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="assets/projects/mbgss.png" alt="Project 6">
-            <div class="project-details">
-                <h3>mixtape by gian.</h3>
-                <p>Course: 6WEBTECHL - Web Technologies</p>
-                <p>Date: November 2022</p>
-                <a href="https://gicarman.github.io/mixtapebygian/" class="project-link" target="_blank">View Project</a>
-            </div>
-        </div>
+        <div><img src="assets/skills/14.png" alt="Sample Album Cover Art"></div>
+        <div><img src="assets/skills/15.png" alt="Patch/Sticker Design"></div>
+        <div><img src="assets/skills/16.png" alt="Mockup Wireframe Project"></div>
+        <div><img src="assets/skills/17.png" alt="Mockup Wireframe Project"></div>
     </div>
 </section>
 
-
-<section id="statement-of-work-philosophy" class="section">
-    <h2 class="section-title">Statement of Work Philosophy</h2>
-    <div class="work-container">
-        <div class="work-text">
-            <h3>Work to learn new things.</h3></br>
-            <p>Working is a way to gain experience on how to live the real world. Every step I take is an opportunity to prove and showcase my abilities. It is a way to show what I can offer and how my imagination can turn a world black and white to screaming colors.</p></br>
-            <p>With me in this journey is the character that I will continue to build as I go along the path to success. Learning new things is collaborative communication will be a key component, so, I will do my absolute best to cater the needs and expectations with professionalism and respect. I will unleash my inner artist to produce quality work to contribute to the way to achieve the goals. I strive to stay maintain the commitment and embrace any changes to be able to solve problems smooth.</p></br>
-            <p>I am ecstatic to share what I can to this evolving world.</p>
-        </div>
-        <div class="work-image">
-            <img src="assets/work-philo.png" alt="Gian Manuel Graduation Photo">
-        </div>
-    </div></br>
-</section>
-
+<!-- AWARDS -->
 <section id="honors-and-awards" class="section">
-    <h2 class="section-title">Honors and Awards</h2>
-    <div class="gallery">
-        <div class="photo active">
-            <img src="assets/awards/cert1.png" alt="Photo 1">
-            <div class="caption">
-                <h3>Dean's List Award</h3>
-                <p>2nd Semester, S.Y 2022-2023</p>
-            </div>
-        </div>
-        <div class="photo">
-            <img src="assets/awards/cert2.png" alt="Photo 2">
-            <div class="caption">
-                <h3>Dean's List Award</h3>
-                <p>1st Semester, S.Y 2021-2022</p>
+    <div class="section-container">
+        <h2 class="section-title">Honors and Awards</h2>
+        
+        <div class="gallery-container">
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                    <div class="photo active">
+                        <img src="assets/awards/cert1.png" alt="Dean's List Award - 1st Semester, A.Y 2021-2022">
+                        <div class="caption">
+                            <h3>Dean's List Award</h3>
+                            <p>1st Semester, A.Y 2021-2022</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <img src="assets/awards/cert2.png" alt="Dean's List Award - 2nd Semester, A.Y 2022-2023">
+                        <div class="caption">
+                            <h3>Dean's List Award</h3>
+                            <p>2nd Semester, A.Y 2022-2023</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <img src="assets/awards/cert3.png" alt="Dean's List Award - 2nd Semester, A.Y 2023-2024">
+                        <div class="caption">
+                            <h3>Dean's List Award</h3>
+                            <p>2nd Semester, A.Y 2023-2024</p>
+                        </div>
+                    </div>
+                    <div class="photo">
+                        <img src="assets/awards/cert4.png" alt="Dean's List Award - 1st Semester, A.Y 2024-2025">
+                        <div class="caption">
+                            <h3>Dean's List Award</h3>
+                            <p>1st Semester, A.Y 2024-2025</p>
+                        </div>
+                    </div>                
+                </div>
+            
+                <button class="gallery-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="gallery-nav next" onclick="changeSlide(1)">&#10095;</button>
             </div>
         </div>
 
-        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next" onclick="changeSlide(1)">&#10095;</button>
-    </div></br>
-
-    <h2 class = "skills-title">Transcript/Course Grades</h2>
-    <div class="button-container">
-        <a href="assets/copyofgrades_manuel.pdf" target="_blank" class="view-transcript-btn">View Transcript</a>
+        <div class="transcript-container">
+            <h3 class="subsection-title">Transcript</h3>
+            <div class="button-container">
+                <button class="primary-button view-transcript-btn" onclick="openTranscript()">View Transcript</button>
+            </div>
+            
+            <div id="transcriptModal" class="modal">
+                <span class="close" onclick="closeTranscript()">&times;</span>
+                
+                <div id="transcriptWrapper" class="image-wrapper">
+                    <img class="modal-content" id="transcriptImage" src="assets/manuel_cog.png" alt="Transcript">
+                </div>
+            
+                <div class="zoom-controls">
+                    <button onclick="zoomIn()">+</button>
+                    <button onclick="zoomOut()">−</button>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section id="student-learning" class="section">
-    <h2 class="section-title">Student Learning</h2></h2></br>
-    <h2 class = "learning-title">Graded Examinations</h2></br>
-    <div class="course-container">
-        <div class="course-item">
-            <img src="assets/learning/exam-1.png" alt="Image 1">
-            <h3>Quiz 2: Dart Language</h3>
-            <p><b>Course</b>: Applications Development and Emerging Technologies </p>
-            <a href="assets/learning/exam-1.png" class="view-full-image-btn" target="_blank">View Full Image</a>
+<!-- RESOURCES -->
+<section id="resources" class="section">
+    <h2 class="section-title">Resources</h2>
+    
+    <div class="resources-container">
+        <!-- Certifications Section -->
+        <div class="resources-category">
+            <h3 class="category-title">Certifications</h3>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="assets/affiliations/Manuel-GA4.png" alt="Google Analytics">
+                    </div>
+                    <div class="resource-info">
+                        <h4>Google Analytics</h4>
+                        <p>Google</p>
+                        <a href="assets/affiliations/Manuel-GA4.png" class="resource-btn" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="assets/affiliations/Manuel-JS.png" alt="JavaScript Essentials 1">
+                    </div>
+                    <div class="resource-info">
+                        <h4>JavaScript Essentials 1</h4>
+                        <p>Cisco Networking Academy</p>
+                        <a href="assets/affiliations/Manuel-JS.png" class="resource-btn" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="assets/affiliations/Manuel-RWD.png" alt="Responsive Web Design">
+                    </div>
+                    <div class="resource-info">
+                        <h4>Responsive Web Design</h4>
+                        <p>freeCodeCamp</p>
+                        <a href="assets/affiliations/Manuel-RWD.png" class="resource-btn" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <div class="course-item">
-            <img src="assets/learning/exam-2.png" alt="Image 2">
-            <h3>Midterm Quiz 1</h3>
-            <p><b>Course</b>: Advanced Dynamic Web Applications </p>
-            <a href="assets/learning/exam-2.png" class="view-full-image-btn" target="_blank">View Full Image</a>
-        </div>
-    </div></br>
-    <h2 class = "learning-title">Activities & Assignments</h2></br>
-    <div class="course-container">
-        <div class="course-item">
-            <img src="assets/learning/activity-1.png" alt="Image 3">
-            <h3>Mid Lab Activity 3</h3>
-            <p><b>Course</b>: Cloud Computing </p>
-            <a href="assets/learning/activity-1.png" class="view-full-image-btn" target="_blank">View Full Image</a>
-        </div>
-        
-        <div class="course-item">
-            <img src="assets/learning/activity-2.png" alt="Image 4">
-            <h3>Typographic Logo Activity</h3>
-            <p><b>Course</b>: Web Development Portfolio </p>
-            <a href="assets/learning/activity-2.png" class="view-full-image-btn" target="_blank">View Full Image</a>
+        <!-- Professional Development Section -->
+        <div class="resources-category">
+            <h3 class="category-title">Professional Development</h3>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="assets/affiliations/Manuel-Cyber.png" alt="Cybersecurity Conference">
+                    </div>
+                    <div class="resource-info">
+                        <h4>3rd Regional Cybersecurity Conference 2025</h4>
+                        <p>Holy Angel University</p>
+                        <a href="assets/affiliations/Manuel-Cyber.png" class="resource-btn" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="assets/affiliations/Manuel-BC.png" alt="Blockchain Conference">
+                    </div>
+                    <div class="resource-info">
+                        <h4>1st Regional Blockchain Conference 2024</h4>
+                        <p>Holy Angel University</p>
+                        <a href="assets/affiliations/Manuel-BC.png" class="resource-btn" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-image">
+                        <img src="assets/affiliations/Manuel-CG.png" alt="Code Geeks Membership">
+                    </div>
+                    <div class="resource-info">
+                        <h4>Code Geeks Membership</h4>
+                        <p>HAU-School of Computing</p>
+                        <a href="assets/affiliations/Manuel-CG.png" class="resource-btn" target="_blank">View Certificate</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</section>
-
-<section id="evaluations" class="section">
-    <h2 class="section-title">Evaluations</h2></br>
-    <h2 class = "learning-title">Peers' Testimonial</h2></br>
-    <p class="section-content"><i>There are no peer testimonials yet as of writing.</i></p></br>
-    <h2 class = "learning-title">Professor's Evaluation</h2></br>
-    <div class="prof-eval-container">
-        <img src="assets/evaluation/prof-eval-1.png" alt="Avatar" class="image">
-        <div class="overlay">Feedback by: Mr. Wilson Concepcion</div>
-      </div>
 </section>
 
 <section id="contact" class="section">
-    <h2 class="section-title">Contact</h2>
-    <h2>Get in touch with me directly <a href="mailto:hello.gianmanuel@gmail.com">here</a>.</h2>
-         <div class="social-icons">
-            <a href="https://www.instagram.com/manuelgian_/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/inggn.11" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-            <a href="https://open.spotify.com/user/792yvul708fo497rqksbrr180?si=655bb0da450343ce" target="_blank" rel="noopener noreferrer"><i class="fab fa-spotify"></i></a>
-            <a href="https://www.sunsoutarchives.wordpress.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-wordpress"></i></a>
-            <a href="https://github.com/gicarman" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></i></a>
+    <div class="section-container">
+        <h2 class="section-title">Contact</h2>
+        
+        <div class="contact-content">
+            <div class="contact-message">
+                <p>Get in touch with me directly via <a href="mailto:gianmanuel0211@gmail.com" class="email-link">gianmanuel0211@gmail.com</a></p>
+            </div>
+            
+            <div class="social-container">
+                <h3 class="subsection-title">Connect With Me</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/gianmanuel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <div class="social-icon-wrapper">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span class="icon-label">LinkedIn</span>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/manuelgian_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <div class="social-icon-wrapper">
+                            <i class="fab fa-instagram"></i>
+                            <span class="icon-label">Instagram</span>
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/inggn.11" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <div class="social-icon-wrapper">
+                            <i class="fab fa-facebook"></i>
+                            <span class="icon-label">Facebook</span>
+                        </div>
+                    </a>
+                    <a href="https://open.spotify.com/user/792yvul708fo497rqksbrr180?si=655bb0da450343ce" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+                        <div class="social-icon-wrapper">
+                            <i class="fab fa-spotify"></i>
+                            <span class="icon-label">Spotify</span>
+                        </div>
+                    </a>
+                    <a href="https://www.sunsoutarchives.wordpress.com" target="_blank" rel="noopener noreferrer" aria-label="WordPress">
+                        <div class="social-icon-wrapper">
+                            <i class="fab fa-wordpress"></i>
+                            <span class="icon-label">WordPress</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/gicarman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <div class="social-icon-wrapper">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="icon-label">GitHub</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
         </div>
-    </section>
+    </div>
+</section>
 
 </main>
 
-    <footer class="footer" id="footer">
-        <p>&copy; 2024 Gian Manuel</p>
-    </footer>
+<footer class="footer" id="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-branding">
+                <span class="footer-name">Gian Manuel</span>
+                <span class="footer-divider">|</span>
+                <span class="footer-tagline">Web Portfolio</span>
+            </div>
+            
+            <div class="footer-nav">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#honors-and-awards">Awards</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        
+        <p class="copyright">&copy; 2025 Gian Manuel. All rights reserved.</p>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 
