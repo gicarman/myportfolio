@@ -212,8 +212,6 @@ body {
     }
 }
 
-
-
 /* Section styles */
 .section {
     padding: 50px;
@@ -335,23 +333,6 @@ h2.section-title {
     .footer-nav a {
         font-size: 0.9rem;
     }
-}
-
-/* Hamburger menu styles */
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.hamburger-line {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px auto;
-    transition: all 0.3s ease;
 }
 
 /* Aside styles */
@@ -649,26 +630,6 @@ h2.section-title {
     .hero-cta {
         gap: 10px;
     }
-}
-
-/* ABOUT SECTION STYLES */
-.about-section {
-    padding: 80px 0;
-    background-color: #fbfbfb;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #2d2d2d;
-    margin-bottom: 60px;
-    position: relative;
 }
 
 /* ABOUT SECTION STYLES */
@@ -1257,6 +1218,7 @@ h2.section-title {
 .skill-info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 5px;
 }
 
@@ -1266,22 +1228,32 @@ h2.section-title {
     font-weight: 500;
 }
 
-.skill-percentage {
-    color: #768e1f;
-    font-weight: 600;
+.skill-badge {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 500;
 }
 
-.progress-bar {
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    height: 10px;
-    overflow: hidden;
+.skill-badge.beginner {
+    background-color: #E87722; /* Orange for beginner */
 }
 
-.progress {
-    background-color: #768e1f;
-    height: 100%;
-    position: relative;
+.skill-badge.basic {
+    background-color: #007BC7; /* Blue for basic */
+}
+
+.skill-badge.intermediate {
+    background-color: #22863A; /* Green for intermediate */
+}
+
+.skill-badge.proficient {
+    background-color: #6F42C1; /* Violet for intermediate */
+}
+
+.skill-badge.advanced {
+    background-color: #1B1F23; /* Red for advanced */
 }
 
 /* Design Tools Styling */
@@ -1331,7 +1303,7 @@ h2.section-title {
     font-size: 0.9rem;
 }
 
-/* Currently Learning Section */
+/* Learning Section */
 .learning-tools {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1359,52 +1331,6 @@ h2.section-title {
 
 .learning-item:hover::before {
     opacity: 1;
-}
-
-/* Progress bar animations */
-#progress1 {
-    animation: progressAnimation1 2s ease-out forwards;
-    width: 0;
-}
-
-#progress2 {
-    animation: progressAnimation2 2s ease-out forwards;
-    width: 0;
-}
-
-#progress3 {
-    animation: progressAnimation3 2s ease-out forwards;
-    width: 0;
-}
-
-#progress4 {
-    animation: progressAnimation4 2s ease-out forwards;
-    width: 0;
-}
-
-#progress5 {
-    animation: progressAnimation5 2s ease-out forwards;
-    width: 0;
-}
-
-@keyframes progressAnimation1 {
-    to { width: 70%; }
-}
-
-@keyframes progressAnimation2 {
-    to { width: 65%; }
-}
-
-@keyframes progressAnimation3 {
-    to { width: 55%; }
-}
-
-@keyframes progressAnimation4 {
-    to { width: 40%; }
-}
-
-@keyframes progressAnimation5 {
-    to { width: 35%; }
 }
 
 /* Responsive styles */
@@ -1437,34 +1363,6 @@ h2.section-title {
         grid-template-columns: repeat(1, 1fr);
     }
 }
-
-
-/* Keyframes for the carousel animation */
-@keyframes carouselAnimation {
-    0% {
-        transform: translateX(0); /* Start with no translation */
-    }
-    100% {
-        transform: translateX(-1700%); /* Move the carousel all the way to the left */
-    }
-}
-
-/* Apply the animation to the carousel */
-.carousel {
-    width: 100%; /* Adjust as needed */
-    margin: 0 auto; /* Center the carousel */
-    overflow: hidden; /* Hide overflow to ensure only one image is visible at a time */
-}
-
-/* Apply the animation to the images */
-.carousel img {
-    width: 100%; /* Make sure images fill the entire carousel container */
-    height: auto; /* Maintain aspect ratio */
-    display: inline-block; /* Ensure images are displayed as inline-block elements */
-    vertical-align: top; /* Align images to the top */
-    animation: carouselAnimation 90s linear infinite; /* Adjust the duration (10s) and timing function (linear) as needed */
-}
-
 
 /* PROJECTS SECTION STYLES */
 #projects {
@@ -1710,6 +1608,32 @@ h2.section-title {
 .project-item:hover .project-link {
     background-color: #fff;
     color: #768e1f;
+}
+
+/* Keyframes for the carousel animation */
+@keyframes carouselAnimation {
+    0% {
+        transform: translateX(0); /* Start with no translation */
+    }
+    100% {
+        transform: translateX(-1700%); /* Move the carousel all the way to the left */
+    }
+}
+
+/* Apply the animation to the carousel */
+.carousel {
+    width: 100%; /* Adjust as needed */
+    margin: 0 auto; /* Center the carousel */
+    overflow: hidden; /* Hide overflow to ensure only one image is visible at a time */
+}
+
+/* Apply the animation to the images */
+.carousel img {
+    width: 100%; /* Make sure images fill the entire carousel container */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Ensure images are displayed as inline-block elements */
+    vertical-align: top; /* Align images to the top */
+    animation: carouselAnimation 90s linear infinite; /* Adjust the duration (10s) and timing function (linear) as needed */
 }
 
 /* HONORS AND AWARDS SECTION */
