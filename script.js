@@ -38,13 +38,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Slick carousel initialization
+// Updated Slick carousel initialization
 $(document).ready(function () {
     $('.carousel').slick({
         dots: true,
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        cssEase: 'linear',
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    centerMode: true,
+                    centerPadding: '40px'
+                }
+            }
+        ]
     });
 });
 
