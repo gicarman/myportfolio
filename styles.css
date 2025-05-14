@@ -1749,31 +1749,77 @@ h2.section-title {
     opacity: 0.5;
 }
 
-/* Carousel Styling */
+/* Updated Carousel Styling */
 .carousel {
-    padding: 30px 0;
-    max-width: 90%;
-    margin: 0 auto;
-    background-color: #fafafa;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px 0; /* Restored padding to original value */
+    max-width: 90%; /* Restored to original 90% width */
+    margin: 0 auto 40px; /* Added bottom margin to match project containers */
+    background-color: transparent; /* Remove background color */
+    border-radius: 0; /* Remove border radius */
+    box-shadow: none; /* Remove box shadow */
 }
 
-.carousel div {
-    padding: 10px;
+/* Fix for Other Works section */
+.skills-title {
+    margin: 50px 0 30px; /* Ensure proper margin spacing for section titles */
+}
+
+.carousel .slick-slide {
+    padding: 10px; /* Restored padding to slides */
+    background-color: transparent;
 }
 
 .carousel img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    box-shadow: none;
     transition: all 0.4s ease;
+    background-color: transparent;
 }
 
 .carousel img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(118, 142, 31, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 90%;
+        padding: 15px 0;
+    }
+    
+    /* Adjust slick dots for better mobile display */
+    .slick-dots {
+        bottom: -25px;
+    }
+    
+    /* Make carousel items larger on mobile */
+    .carousel .slick-slide {
+        padding: 5px; /* Reduced padding but not eliminated */
+    }
+    
+    /* Make the carousel take up similar width as project containers */
+    .slick-slide img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        background-color: transparent;
+    }
+    
+    /* Custom styling for slick arrows on mobile */
+    .slick-prev, .slick-next {
+        z-index: 10;
+    }
+    
+    .slick-prev {
+        left: 10px;
+    }
+    
+    .slick-next {
+        right: 10px;
+    }
 }
 
 /* Media Queries */
