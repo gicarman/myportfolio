@@ -1885,7 +1885,7 @@ h2.section-title {
         transform: translateX(0); /* Start with no translation */
     }
     100% {
-        transform: translateX(-1700%); /* Move the carousel all the way to the left */
+        transform: translateX(-1400%); /* Move the carousel all the way to the left */
     }
 }
 
