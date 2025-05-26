@@ -18,7 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background-color: #c4c484;
+    background-color: #fbf3d3;
     color: #2d2d2d;
     position: fixed;
     width: 100%;
@@ -35,7 +35,7 @@ body {
 }
 
 .logo-img {
-    height: 50px;
+    height: 70px;
     margin-right: 12px;
     transition: transform 0.3s ease;
 }
@@ -280,7 +280,7 @@ h2.section-title {
 
 /* FOOTER STYLES */
 .footer {
-    background: linear-gradient(to right, #c4c484, #d6d6a7);
+    background-color: #fbf3d3;
     color: #2d2d2d;
     padding: 20px 0;
     width: 100%;
@@ -384,7 +384,7 @@ h2.section-title {
 /* Aside styles */
 .aside {
     width: 200px; /* Adjust width as needed */
-    background-color: #c4c484; /* Sidebar background color */
+    background-color: #fbf3d3; /* Sidebar background color */
     color: #2d2d2d; /* Sidebar text color */
     position: fixed;
     top: 100px; /* Adjust top position according to your header height */
@@ -1885,7 +1885,7 @@ h2.section-title {
         transform: translateX(0); /* Start with no translation */
     }
     100% {
-        transform: translateX(-1400%); /* Move the carousel all the way to the left */
+        transform: translateX(-1700%); /* Move the carousel all the way to the left */
     }
 }
 
@@ -2166,7 +2166,7 @@ h2.section-title {
 
 /* CONTACT SECTION STYLES */
 #contact {
-    background-color: #f9f9f9;
+    background-color: #fbf3d3;
     padding: 80px 0 60px;
     position: relative;
 }
