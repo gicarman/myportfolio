@@ -387,7 +387,7 @@ h2.section-title {
     background-color: #fbf3d3; /* Sidebar background color */
     color: #2d2d2d; /* Sidebar text color */
     position: fixed;
-    top: 100px; /* Adjust top position according to your header height */
+    top: 125px; /* Adjust top position according to your header height */
     bottom: 0; /* Change to bottom 0 */
     left: 0;
     overflow-y: auto;
