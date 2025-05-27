@@ -297,7 +297,8 @@
                     <h3>Wear Potential</h3>
                     <p>Group Project for Web Search Engine Optimization and Analytics</p>
                     <p>Luoang, Macam, Manabat & Manuel (2023-24)</p>
-                    <a href="assets/projects/WearPotential.pdf" class="project-link" target="_blank">Overview</a>
+                    <a href="https://wearpotential.com/" class="project-link" target="_blank">View Project</a>
+                    <span class="project-link" onclick="openPDF('assets/projects/WearPotential.pdf', 'Wear Potential Overview')">Overview</span>
                 </div>
             </div>
         </div>
@@ -313,7 +314,7 @@
                     <h3>FlawlessFindings</h3>
                     <p>Group Project</p>
                     <p>Aquino, Luoang, Manabat & Manuel (2024)</p>
-                    <a href="assets/projects/FlawlessFindings-UserManual.pdf" class="project-link" target="_blank">Overview</a>
+                    <span class="project-link" onclick="openPDF('assets/projects/FlawlessFindings-UserManual.pdf', 'FlawlessFindings User Manual')">Overview</span>
                 </div>
             </div>
         </div>
@@ -329,13 +330,13 @@
                     <h3>archives by gian</h3>
                     <p>WordPress Blog</p>
                     <p>Manuel</p>
-                    <a href="https://sunsoutarchives.wordpress.com" class="project-link" target="_blank">View</a>
+                    <a href="https://sunsoutarchives.wordpress.com" class="project-link" target="_blank">Overview</a>
                 </div>
             </div>
         </div>
     </div>
     
-      <!-- Wireframes & Mockups -->
+    <!-- Wireframes & Mockups -->
     <h2 class="skills-title">Wireframes & Mockups</h2>
     <div class="projects-container">
 
@@ -349,7 +350,7 @@
                 <div class="project-details">
                     <h3>GM Solutions Landing Page</h3>
                     <p>Mockup using Figma</p>
-                    <a href="assets/projects/Mockup-1.pdf" class="project-link" target="_blank">View</a>
+                    <span class="project-link" onclick="openPDF('assets/projects/Mockup-1.pdf', 'GM Solutions Landing Page Mockup')">View</span>
                 </div>
             </div>
         </div>
@@ -364,7 +365,7 @@
                 <div class="project-details">
                     <h3>Instagram Wireframe Practice</h3>
                     <p>Wireframe using Figma</p>
-                    <a href="assets/projects/Wireframe-5.pdf" class="project-link" target="_blank">View</a>
+                    <span class="project-link" onclick="openPDF('assets/projects/Wireframe-5.pdf', 'Instagram Wireframe Practice')">View</span>
                 </div>
             </div>
         </div>
@@ -379,7 +380,7 @@
                 <div class="project-details">
                     <h3>Disaster Preparedness Web App</h3>
                     <p>Wireframe using Canva</p>
-                    <a href="assets/projects/Wireframe-1.pdf" class="project-link" target="_blank">View</a>
+                    <span class="project-link" onclick="openPDF('assets/projects/Wireframe-1.pdf', 'Disaster Preparedness Web App Wireframe')">View</span>
                 </div>
             </div>
         </div>
@@ -394,7 +395,7 @@
                 <div class="project-details">
                     <h3>Barangay SK Management</h3>
                     <p>Wireframe using Canva</p>
-                    <a href="assets/projects/Wireframe-2.pdf" class="project-link" target="_blank">View</a>
+                    <span class="project-link" onclick="openPDF('assets/projects/Wireframe-2.pdf', 'Barangay SK Management Wireframe')">View</span>
                 </div>
             </div>
         </div>
@@ -409,7 +410,7 @@
                 <div class="project-details">
                     <h3>Mental Health Advocacy</h3>
                     <p>Wireframe using Canva</p>
-                    <a href="assets/projects/Wireframe-3.pdf" class="project-link" target="_blank">View</a>
+                    <span class="project-link" onclick="openPDF('assets/projects/Wireframe-3.pdf', 'Mental Health Advocacy Wireframe')">View</span>
                 </div>
             </div>
         </div>
@@ -424,11 +425,24 @@
                 <div class="project-details">
                     <h3>Language Learning</h3>
                     <p>Wireframe using Canva</p>
-                    <a href="assets/projects/Wireframe-4.pdf" class="project-link" target="_blank">View</a>
+                    <span class="project-link" onclick="openPDF('assets/projects/Wireframe-4.pdf', 'Language Learning Wireframe')">View</span>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
+<!-- PDF Modal -->
+<div id="pdfModal" class="pdf-modal">
+    <div class="pdf-modal-content">
+        <div class="pdf-header">
+            <h3 id="pdfTitle" class="pdf-title">PDF Viewer</h3>
+            <button class="close-btn" onclick="closePDF()">&times;</button>
+        </div>
+        <div class="loading-spinner" id="loadingSpinner"></div>
+        <iframe id="pdfViewer" class="pdf-viewer"></iframe>
+    </div>
+</div>
 
     <!-- Other Works Section -->
     <h2 class="skills-title">Other Works</h2>
@@ -583,7 +597,7 @@
 <div id="certModal" class="cert-modal">
     <div class="cert-modal-content">
         <div class="cert-modal-header">
-            <span class="cert-title">Certificate Viewer</span>
+            <span class="cert-title"></span>
             <div class="cert-controls">
                 <button id="zoomIn" class="zoom-btn">+</button>
                 <button id="zoomOut" class="zoom-btn">−</button>
