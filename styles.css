@@ -1651,171 +1651,7 @@ h2.section-title {
     }
 }
 
-/* PROJECTS SECTION STYLES */
-#projects {
-    min-height: 100vh;
-    padding: 60px 0;
-    position: relative;
-    background-color: #f9f9f9;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #768e1f;
-    position: relative;
-}
-
-.section-title:after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: #768e1f;
-}
-
-/* Projects Container */
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto 40px;
-    padding: 0 20px;
-}
-
-.project-item {
-    width: calc(33.33% - 20px);
-    margin-bottom: 30px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease;
-    background-color: #768e1f;
-    position: relative;
-}
-
-.project-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(118, 142, 31, 0.3);
-}
-
-.project-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.project-image {
-    position: relative;
-    overflow: hidden;
-    height: 200px;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.project-item:hover .project-image img {
-    transform: scale(1.1);
-}
-
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(118, 142, 31, 0.85);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.project-item:hover .project-overlay {
-    opacity: 1;
-}
-
-.view-project {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    border: 2px solid #fff;
-    padding: 10px 25px;
-    border-radius: 30px;
-    text-transform: uppercase;
-}
-
-.project-details {
-    padding: 20px;
-    color: #fff;
-}
-
-.project-details h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.project-details p {
-    color: #fbf3d3;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-
-.project-link {
-    display: inline-block;
-    background-color: #fbf3d3;
-    color: #768e1f;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin-top: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.project-link:hover {
-    background-color: #fff;
-    transform: translateY(-3px);
-}
-
-/* Skills Title */
-.skills-title {
-    text-align: center;
-    font-size: 1.8rem;
-    margin: 50px 0 30px;
-    color: #768e1f;
-    position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.skills-title:after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #768e1f;
-    opacity: 0.5;
-}
-
-/* PDF Modal Styles */
+/* MOBILE-OPTIMIZED PDF MODAL STYLES */
 .pdf-modal {
     display: none;
     position: fixed;
@@ -1865,6 +1701,7 @@ h2.section-title {
     position: relative;
     flex-wrap: wrap;
     gap: 10px;
+    min-height: 60px;
 }
 
 .pdf-title {
@@ -1898,9 +1735,11 @@ h2.section-title {
     align-items: center;
     justify-content: center;
     font-weight: 600;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
-.control-btn:hover {
+.control-btn:hover, .control-btn:active {
     background: #5a6b18;
     transform: translateY(-1px);
 }
@@ -1937,24 +1776,11 @@ h2.section-title {
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.close-btn:hover {
+.close-btn:hover, .close-btn:active {
     background: #cc0000;
-}
-
-.zoom-info {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-}
-
-.pdf-viewer {
-    width: 100%;
-    height: calc(100% - 80px);
-    border: none;
-    background-color: #f5f5f5;
-    transform-origin: top left;
-    transition: transform 0.3s ease;
 }
 
 .pdf-container {
@@ -1962,6 +1788,16 @@ h2.section-title {
     height: calc(100% - 80px);
     overflow: auto;
     position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #f5f5f5;
+    transform-origin: top left;
+    transition: transform 0.3s ease;
 }
 
 /* Loading spinner */
@@ -1977,6 +1813,7 @@ h2.section-title {
     border-top: 5px solid #768e1f;
     border-radius: 50%;
     animation: spin 1s linear infinite;
+    z-index: 10;
 }
 
 @keyframes spin {
@@ -1984,33 +1821,8 @@ h2.section-title {
     100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-    .project-item {
-        width: calc(50% - 15px);
-    }
-    
-    .pdf-modal-content {
-        width: 95%;
-        height: 95%;
-        margin: 2.5% auto;
-    }
-    
-    .pdf-header {
-        padding: 12px 15px;
-    }
-    
-    .pdf-title {
-        font-size: 16px;
-        min-width: 150px;
-    }
-}
-
+/* Mobile-specific styles */
 @media (max-width: 768px) {
-    .project-item {
-        width: 100%;
-    }
-    
     .pdf-modal-content {
         width: 98%;
         height: 98%;
@@ -2023,6 +1835,7 @@ h2.section-title {
         flex-direction: column;
         align-items: center;
         gap: 8px;
+        min-height: 80px;
     }
     
     .pdf-title {
@@ -2051,25 +1864,117 @@ h2.section-title {
     }
     
     .control-btn {
-        font-size: 11px;
-        padding: 6px 8px;
-        min-width: 30px;
-        height: 30px;
+        font-size: 14px;
+        padding: 8px 12px;
+        min-width: 40px;
+        height: 40px;
+        /* Larger touch targets for mobile */
     }
     
     .zoom-display {
-        font-size: 11px;
-        padding: 4px 8px;
-        min-width: 45px;
-    }
-    
-    .pdf-viewer {
-        height: calc(100% - 100px);
+        font-size: 12px;
+        padding: 8px 12px;
+        min-width: 55px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .pdf-container {
         height: calc(100% - 100px);
+        /* Better scrolling on mobile */
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
     }
+    
+    .pdf-viewer {
+        height: calc(100% - 10px);
+        min-height: 500px;
+    }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+    .pdf-modal-content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    
+    .pdf-header {
+        padding: 8px 10px;
+    }
+    
+    .pdf-title {
+        font-size: 12px;
+    }
+    
+    .control-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+        min-width: 35px;
+        height: 35px;
+    }
+    
+    .zoom-display {
+        font-size: 11px;
+        padding: 6px 10px;
+        min-width: 50px;
+        height: 35px;
+    }
+    
+    .close-btn {
+        min-width: 28px;
+        height: 28px;
+        font-size: 12px;
+        top: 6px;
+        right: 10px;
+    }
+}
+
+/* Touch-friendly project links */
+.project-link {
+    display: inline-block;
+    background-color: #fbf3d3;
+    color: #768e1f;
+    padding: 10px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(118, 142, 31, 0.2);
+    user-select: none;
+    min-height: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.project-link:hover, .project-link:active {
+    background-color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Mobile device class for additional targeting */
+.mobile-device .pdf-viewer {
+    /* Additional mobile-specific iframe styles */
+    pointer-events: auto;
+    touch-action: manipulation;
+}
+
+.mobile-device .pdf-container {
+    /* Ensure proper scrolling on mobile */
+    position: relative;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent zoom on double tap for control buttons */
+.control-btn, .close-btn {
+    touch-action: manipulation;
 }
 
 /* Updated Carousel Styling */
