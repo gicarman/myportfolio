@@ -437,10 +437,19 @@
     <div class="pdf-modal-content">
         <div class="pdf-header">
             <h3 id="pdfTitle" class="pdf-title">PDF Viewer</h3>
+            <div class="pdf-controls">
+                <button class="control-btn" onclick="zoomOut()" id="zoomOutBtn">-</button>
+                <span class="zoom-display" id="zoomDisplay">100%</span>
+                <button class="control-btn" onclick="zoomIn()" id="zoomInBtn">+</button>
+                <button class="control-btn" onclick="resetZoom()">Reset</button>
+                <button class="control-btn" onclick="fitToWidth()">Fit</button>
+            </div>
             <button class="close-btn" onclick="closePDF()">&times;</button>
         </div>
         <div class="loading-spinner" id="loadingSpinner"></div>
-        <iframe id="pdfViewer" class="pdf-viewer"></iframe>
+        <div class="pdf-container">
+            <iframe id="pdfViewer" class="pdf-viewer"></iframe>
+        </div>
     </div>
 </div>
 
