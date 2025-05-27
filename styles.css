@@ -1858,40 +1858,68 @@ h2.section-title {
 .pdf-header {
     background-color: #fbf3d3;
     color: #2d2d2d;
-    padding: 20px 25px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .pdf-title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     margin: 0;
     flex: 1;
     text-align: center;
+    min-width: 200px;
 }
 
 .pdf-controls {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
+    flex-shrink: 0;
 }
 
 .control-btn {
-    background: rgba(255, 255, 255, 0.2);
+    background: #768e1f;
     color: white;
     border: none;
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
 }
 
 .control-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: #5a6b18;
+    transform: translateY(-1px);
+}
+
+.control-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.zoom-display {
+    background: #f0f0f0;
+    color: #333;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 50px;
+    text-align: center;
 }
 
 .close-btn {
@@ -1925,6 +1953,15 @@ h2.section-title {
     height: calc(100% - 80px);
     border: none;
     background-color: #f5f5f5;
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+
+.pdf-container {
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow: auto;
+    position: relative;
 }
 
 /* Loading spinner */
@@ -1958,6 +1995,15 @@ h2.section-title {
         height: 95%;
         margin: 2.5% auto;
     }
+    
+    .pdf-header {
+        padding: 12px 15px;
+    }
+    
+    .pdf-title {
+        font-size: 16px;
+        min-width: 150px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1965,19 +2011,64 @@ h2.section-title {
         width: 100%;
     }
     
-    .pdf-controls {
-        flex-wrap: wrap;
-        gap: 10px;
+    .pdf-modal-content {
+        width: 98%;
+        height: 98%;
+        margin: 1% auto;
+        border-radius: 8px;
     }
     
     .pdf-header {
+        padding: 10px 12px;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        align-items: center;
+        gap: 8px;
     }
     
     .pdf-title {
-        text-align: left;
+        font-size: 14px;
+        text-align: center;
+        order: 1;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .pdf-controls {
+        order: 2;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        min-width: 32px;
+        height: 32px;
+        font-size: 14px;
+        order: 3;
+    }
+    
+    .control-btn {
+        font-size: 11px;
+        padding: 6px 8px;
+        min-width: 30px;
+        height: 30px;
+    }
+    
+    .zoom-display {
+        font-size: 11px;
+        padding: 4px 8px;
+        min-width: 45px;
+    }
+    
+    .pdf-viewer {
+        height: calc(100% - 100px);
+    }
+    
+    .pdf-container {
+        height: calc(100% - 100px);
     }
 }
 
