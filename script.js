@@ -314,11 +314,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// PDF VIEWER WITH ZOOM CONTROLS
+// MOBILE-COMPATIBLE PDF VIEWER WITH ZOOM CONTROLS
 let currentPdfUrl = '';
 let currentZoom = 100;
 let minZoom = 25;
 let maxZoom = 300;
+let isMobile = false;
+let pdfContainer = null;
+
+// Detect mobile device
+function detectMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+           || window.innerWidth <= 768;
+}
 
 function openPDF(pdfUrl, title) {
     const modal = document.getElementById('pdfModal');
@@ -328,9 +336,10 @@ function openPDF(pdfUrl, title) {
     
     currentPdfUrl = pdfUrl;
     titleElement.textContent = title;
+    isMobile = detectMobile();
     
     // Reset zoom
-    currentZoom = 100;
+    currentZoom = isMobile ? 75 : 100;
     updateZoomDisplay();
     
     // Show modal and loading spinner
@@ -338,19 +347,61 @@ function openPDF(pdfUrl, title) {
     spinner.style.display = 'block';
     viewer.style.display = 'none';
     
-    // Load PDF with zoom parameter
+    // For mobile devices, use different approach
+    if (isMobile) {
+        setupMobilePDFViewer(pdfUrl, viewer, spinner);
+    } else {
+        setupDesktopPDFViewer(pdfUrl, viewer, spinner);
+    }
+    
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+}
+
+function setupDesktopPDFViewer(pdfUrl, viewer, spinner) {
     const pdfUrlWithZoom = `${pdfUrl}#zoom=${currentZoom}`;
     viewer.src = pdfUrlWithZoom;
     
-    // Hide spinner when PDF loads
     viewer.onload = function() {
         spinner.style.display = 'none';
         viewer.style.display = 'block';
         updateZoomButtons();
     };
+}
+
+function setupMobilePDFViewer(pdfUrl, viewer, spinner) {
+    // For mobile, create a container with transform scaling
+    pdfContainer = viewer.parentElement;
     
-    // Prevent body scroll when modal is open
-    document.body.style.overflow = 'hidden';
+    // Set up the PDF without zoom parameter for better mobile compatibility
+    viewer.src = pdfUrl;
+    
+    viewer.onload = function() {
+        spinner.style.display = 'none';
+        viewer.style.display = 'block';
+        applyMobileZoom();
+        updateZoomButtons();
+    };
+    
+    // Add touch event listeners for better mobile interaction
+    addTouchSupport();
+}
+
+function applyMobileZoom() {
+    const viewer = document.getElementById('pdfViewer');
+    if (viewer && isMobile) {
+        const scale = currentZoom / 100;
+        viewer.style.transform = `scale(${scale})`;
+        viewer.style.transformOrigin = 'top left';
+        
+        // Adjust container to accommodate scaled content
+        const container = viewer.parentElement;
+        if (scale < 1) {
+            container.style.overflow = 'hidden';
+        } else {
+            container.style.overflow = 'auto';
+        }
+    }
 }
 
 function closePDF() {
@@ -359,8 +410,15 @@ function closePDF() {
     
     modal.classList.remove('active');
     viewer.src = '';
+    viewer.style.transform = '';
     currentZoom = 100;
     updateZoomDisplay();
+    
+    // Clean up mobile-specific styles
+    if (pdfContainer) {
+        pdfContainer.style.overflow = 'auto';
+        pdfContainer = null;
+    }
     
     // Restore body scroll
     document.body.style.overflow = 'auto';
@@ -381,23 +439,33 @@ function zoomOut() {
 }
 
 function resetZoom() {
-    currentZoom = 100;
+    currentZoom = isMobile ? 75 : 100;
     applyZoom();
 }
 
 function fitToWidth() {
-    // Set to a good mobile-friendly zoom level
-    const isMobile = window.innerWidth <= 768;
-    currentZoom = isMobile ? 75 : 85;
+    // Different fit strategies for mobile vs desktop
+    if (isMobile) {
+        currentZoom = 60; // Better mobile fit
+    } else {
+        currentZoom = window.innerWidth <= 992 ? 75 : 85;
+    }
     applyZoom();
 }
 
 function applyZoom() {
     const viewer = document.getElementById('pdfViewer');
-    if (viewer && currentPdfUrl) {
+    if (!viewer || !currentPdfUrl) return;
+    
+    if (isMobile) {
+        // Use CSS transform for mobile
+        applyMobileZoom();
+    } else {
+        // Use URL parameter for desktop
         const pdfUrlWithZoom = `${currentPdfUrl}#zoom=${currentZoom}`;
         viewer.src = pdfUrlWithZoom;
     }
+    
     updateZoomDisplay();
     updateZoomButtons();
 }
@@ -421,6 +489,55 @@ function updateZoomButtons() {
     }
 }
 
+// Add touch support for mobile devices
+function addTouchSupport() {
+    const viewer = document.getElementById('pdfViewer');
+    if (!viewer || !isMobile) return;
+    
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let initialZoom = currentZoom;
+    
+    viewer.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 2) {
+            // Pinch zoom start
+            const touch1 = e.touches[0];
+            const touch2 = e.touches[1];
+            const distance = Math.hypot(
+                touch1.clientX - touch2.clientX,
+                touch1.clientY - touch2.clientY
+            );
+            touchStartX = distance;
+            initialZoom = currentZoom;
+            e.preventDefault();
+        }
+    }, { passive: false });
+    
+    viewer.addEventListener('touchmove', function(e) {
+        if (e.touches.length === 2) {
+            // Pinch zoom
+            const touch1 = e.touches[0];
+            const touch2 = e.touches[1];
+            const distance = Math.hypot(
+                touch1.clientX - touch2.clientX,
+                touch1.clientY - touch2.clientY
+            );
+            
+            const scale = distance / touchStartX;
+            let newZoom = Math.round(initialZoom * scale);
+            newZoom = Math.max(minZoom, Math.min(maxZoom, newZoom));
+            
+            if (newZoom !== currentZoom) {
+                currentZoom = newZoom;
+                applyMobileZoom();
+                updateZoomDisplay();
+                updateZoomButtons();
+            }
+            e.preventDefault();
+        }
+    }, { passive: false });
+}
+
 // Close modal when clicking outside
 document.getElementById('pdfModal').addEventListener('click', function(e) {
     if (e.target === this) {
@@ -435,9 +552,9 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Handle zoom with keyboard shortcuts
+// Handle zoom with keyboard shortcuts (desktop only)
 document.addEventListener('keydown', function(e) {
-    if (document.getElementById('pdfModal').classList.contains('active')) {
+    if (document.getElementById('pdfModal').classList.contains('active') && !isMobile) {
         if (e.ctrlKey || e.metaKey) {
             if (e.key === '=' || e.key === '+') {
                 e.preventDefault();
@@ -453,27 +570,80 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Auto-fit on mobile when PDF loads
+// Handle orientation change on mobile
+window.addEventListener('orientationchange', function() {
+    if (document.getElementById('pdfModal').classList.contains('active') && isMobile) {
+        setTimeout(() => {
+            isMobile = detectMobile();
+            applyZoom();
+        }, 500);
+    }
+});
+
+// Handle window resize
 window.addEventListener('resize', function() {
-    if (document.getElementById('pdfModal').classList.contains('active')) {
-        const isMobile = window.innerWidth <= 768;
-        if (isMobile && currentZoom > 100) {
-            fitToWidth();
+    const wasModal = document.getElementById('pdfModal').classList.contains('active');
+    const wasMobile = isMobile;
+    isMobile = detectMobile();
+    
+    if (wasModal) {
+        // If device type changed, reinitialize viewer
+        if (wasMobile !== isMobile) {
+            const viewer = document.getElementById('pdfViewer');
+            const spinner = document.getElementById('loadingSpinner');
+            
+            if (isMobile) {
+                setupMobilePDFViewer(currentPdfUrl, viewer, spinner);
+            } else {
+                viewer.style.transform = '';
+                setupDesktopPDFViewer(currentPdfUrl, viewer, spinner);
+            }
+        } else if (isMobile) {
+            applyZoom();
         }
     }
 });
 
-// Initialize fit-to-width for mobile on load
+// Alternative PDF opening method for better mobile compatibility
+function openPDFAlternative(pdfUrl, title) {
+    if (detectMobile()) {
+        // For mobile, try to open in new tab/window as fallback
+        const confirmOpen = confirm(`Open ${title} in new tab?`);
+        if (confirmOpen) {
+            window.open(pdfUrl, '_blank');
+        }
+    } else {
+        openPDF(pdfUrl, title);
+    }
+}
+
+// Initialize on DOM load
 document.addEventListener('DOMContentLoaded', function() {
-    // Auto-apply mobile-friendly zoom when opening PDFs on mobile
-    const originalOpenPDF = openPDF;
-    window.openPDF = function(pdfUrl, title) {
-        originalOpenPDF.call(this, pdfUrl, title);
-        // Small delay to ensure PDF loads before applying mobile zoom
-        setTimeout(() => {
-            if (window.innerWidth <= 768) {
-                fitToWidth();
+    isMobile = detectMobile();
+    
+    // Add mobile-specific CSS classes
+    if (isMobile) {
+        document.body.classList.add('mobile-device');
+    }
+    
+    // Override the original openPDF calls for better mobile support
+    const projectLinks = document.querySelectorAll('.project-link[onclick*="openPDF"]');
+    projectLinks.forEach(link => {
+        const originalOnclick = link.getAttribute('onclick');
+        if (originalOnclick) {
+            // Extract PDF URL and title from onclick
+            const matches = originalOnclick.match(/openPDF\('([^']+)',\s*'([^']+)'\)/);
+            if (matches) {
+                const pdfUrl = matches[1];
+                const pdfTitle = matches[2];
+                
+                // Remove original onclick and add new event listener
+                link.removeAttribute('onclick');
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openPDF(pdfUrl, pdfTitle);
+                });
             }
-        }, 500);
-    };
+        }
+    });
 });
