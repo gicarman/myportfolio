@@ -313,3 +313,58 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// PDF VIEWER
+ let currentPdfUrl = '';
+
+        function openPDF(pdfUrl, title) {
+            const modal = document.getElementById('pdfModal');
+            const viewer = document.getElementById('pdfViewer');
+            const titleElement = document.getElementById('pdfTitle');
+            const spinner = document.getElementById('loadingSpinner');
+            
+            currentPdfUrl = pdfUrl;
+            titleElement.textContent = title;
+            
+            // Show modal and loading spinner
+            modal.classList.add('active');
+            spinner.style.display = 'block';
+            viewer.style.display = 'none';
+            
+            // Load PDF
+            viewer.src = pdfUrl;
+            
+            // Hide spinner when PDF loads
+            viewer.onload = function() {
+                spinner.style.display = 'none';
+                viewer.style.display = 'block';
+            };
+            
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePDF() {
+            const modal = document.getElementById('pdfModal');
+            const viewer = document.getElementById('pdfViewer');
+            
+            modal.classList.remove('active');
+            viewer.src = '';
+            
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('pdfModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePDF();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('pdfModal').classList.contains('active')) {
+                closePDF();
+            }
+        });
