@@ -62,27 +62,42 @@
         </aside>
         
 
-            <main class="main-content">
-                <!-- HOME -->
-                <section id="home" class="section hero-section">
-                    <div class="hero-container">
-                        <div class="hero-content">
-                            <div class="text-container">
-                                <p class="hero-intro">Hello! I am</p>
-                                <h1><span class="typing-text">Gian Carlo Manuel</span></h1>
-                                <p class="hero-description">Aspiring Web & UI/UX Designer. <br><i>Designing with heart, driven by art and imagination.</i></p>
-                                <div class="hero-cta">
-                                    <a href="#about" class="cta-button">About me</a>
-                                    <a href="#contact" class="cta-button-outline">Contact me</a>
-                                </div>
-                            </div>
-                            <div class="hero-image">
-                                <img src="assets/home-photo-green.png" alt="Gian Manuel's Photo">
-                            </div>
+           <main class="main-content">
+        <!-- HOME -->
+        <section id="home" class="section hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="text-container">
+                        <p class="hero-intro">Hey there! I am</p>
+                        <h1><span class="typing-text">Gian Carlo Manuel</span></h1>
+                        <p class="hero-description">Aspiring Web & UI/UX Designer. <br><i>Designing with heart, driven by art and imagination.</i></p>
+                        <div class="hero-cta">
+                            <a href="#about" class="cta-button">About me</a>
+                            <a href="#contact" class="cta-button-outline">Contact me</a>
+                            <button class="cta-button-pride" onclick="openPrideModal()">🏳️‍🌈 Happy Pride!</button>
                         </div>
                     </div>
-                </section>               
+                    <div class="hero-image">
+                        <img src="assets/home-photo-green.png" alt="Gian Manuel's Photo">
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Pride Modal -->
+        <div id="prideModal" class="pride-modal">
+            <div class="pride-modal-content">
+                <span class="close-modal" onclick="closePrideModal()">&times;</span>
+                <h2 class="pride-modal-header">Happy Pride Month!</h2>
+                <img src="assets/GM-Pride-2025.png" alt="Pride Flag" class="pride-image">
+                <p class="pride-message">
+                    Celebrating love, diversity, and the courage to be authentically yourself. 
+                    This Pride Month, let's continue building a world where everyone can love freely and live proudly! 💖
+                </p>
+            </div>
+        </div>
+    </main>            
+         
 <!-- ABOUT -->
 <section id="about" class="section about-section">
     <div class="container">
