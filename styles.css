@@ -629,7 +629,7 @@ h2.section-title {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* PRIDE MONTH CTA BUTTON */
+         /* PRIDE MONTH CTA BUTTON */
         .cta-button-pride {
             display: inline-block;
             padding: 12px 30px;
@@ -644,18 +644,19 @@ h2.section-title {
             background-size: 300% 300%;
             color: white;
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: 700;
+            border-radius: 5px;
+            font-weight: 600;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
-            animation: rainbow-shift 3s ease-in-out infinite;
+            animation: rainbow-shift 5s ease-in-out infinite;
             cursor: pointer;
+            font-family: 'Poppins', sans-serif;
         }
 
         .cta-button-pride:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            animation-duration: 1s;
+            animation-duration: 3s;
         }
 
         @keyframes rainbow-shift {
