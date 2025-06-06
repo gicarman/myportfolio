@@ -1540,6 +1540,12 @@ h2.section-title {
         padding: 1rem;
     }
     
+    .resource-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
     .category-title {
         font-size: 1.3rem;
         margin-bottom: 1.25rem;
@@ -1916,6 +1922,15 @@ h2.section-title {
     font-size: 14px;
 }
 
+/* Button Container */
+.project-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+/* Filled Button (View) */
 .project-link {
     display: inline-block;
     background-color: #fbf3d3;
@@ -1925,12 +1940,65 @@ h2.section-title {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    margin-top: 10px;
+    font-size: 14px;
 }
 
 .project-link:hover {
     background-color: #fff;
     transform: translateY(-3px);
+}
+
+/* Outline Button (Dribbble) */
+.project-link-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: transparent;
+    color: #fbf3d3;
+    border: 2px solid #fbf3d3;
+    padding: 6px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.project-link-outline:hover {
+    background-color: #fbf3d3;
+    color: #768e1f;
+    transform: translateY(-3px);
+}
+
+.arrow-up-right {
+    font-size: 12px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.project-link-outline:hover .arrow-up-right {
+    transform: translate(2px, -2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .project-link,
+    .project-link-outline {
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .project-link-outline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 /* Skills Title */
