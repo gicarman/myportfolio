@@ -106,7 +106,7 @@ body {
     background-color: #768e1f;
     color: #fbf3d3;
     border: none;
-    border-radius: 6px;
+    border-radius: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-left: 25px;
@@ -599,7 +599,7 @@ h2.section-title {
             background-color: #768e1f;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 16px;
             font-weight: 600;
             transition: all 0.3s ease;
         }
@@ -616,7 +616,7 @@ h2.section-title {
             background-color: transparent;
             color: #768e1f;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 16px;
             font-weight: 600;
             border: 2px solid #768e1f;
             transition: all 0.3s ease;
@@ -629,7 +629,7 @@ h2.section-title {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-         /* PRIDE MONTH CTA BUTTON */
+        /* PRIDE MONTH CTA BUTTON */
         .cta-button-pride {
             display: inline-block;
             padding: 12px 30px;
@@ -644,7 +644,7 @@ h2.section-title {
             background-size: 300% 300%;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 16px;
             font-weight: 600;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
@@ -995,7 +995,7 @@ h2.section-title {
     flex: 1;
     min-width: 300px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1069,7 +1069,7 @@ h2.section-title {
 .philosophy-point {
     display: flex;
     background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 16px;
     padding: 15px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
@@ -1282,7 +1282,7 @@ h2.section-title {
 
 .resource-card {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1337,7 +1337,7 @@ h2.section-title {
     background-color: #768e1f;
     color: #ffffff;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 16px;
     font-size: 0.9rem;
     font-weight: 500;
     transition: background-color 0.3s ease;
@@ -1363,6 +1363,7 @@ h2.section-title {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    border-radius: 16px;
 }
 
 .cert-modal-content {
@@ -1370,7 +1371,7 @@ h2.section-title {
     height: 85%;
     max-width: 1200px;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1598,7 +1599,7 @@ h2.section-title {
 
 .skills-category {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 16px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     display: flex;
@@ -1840,7 +1841,7 @@ h2.section-title {
 .project-item {
     width: calc(33.33% - 20px);
     margin-bottom: 30px;
-    border-radius: 10px;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
@@ -1936,7 +1937,7 @@ h2.section-title {
     background-color: #fbf3d3;
     color: #768e1f;
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 16px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -1957,7 +1958,7 @@ h2.section-title {
     color: #fbf3d3;
     border: 2px solid #fbf3d3;
     padding: 6px 15px;
-    border-radius: 5px;
+    border-radius: 16px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -2219,7 +2220,7 @@ h2.section-title {
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 16px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     overflow: hidden;
 }
