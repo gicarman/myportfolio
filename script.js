@@ -338,3 +338,38 @@ function openPrideModal() {
                 closePrideModal();
             }
         });
+
+//TAB PROJECTS
+function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+
+            // Re-trigger animations for project items in the active tab
+            const activeItems = document.querySelectorAll(`#${tabName} .project-item`);
+            activeItems.forEach((item, index) => {
+                item.style.animation = 'none';
+                item.offsetHeight; // Trigger reflow
+                item.style.animation = `fadeInUp 0.5s ease forwards`;
+                item.style.animationDelay = `${(index + 1) * 0.1}s`;
+            });
+        }
+
+        // Initialize the page with mockups tab active
+        document.addEventListener('DOMContentLoaded', function() {
+            showTab('mockups');
+        });
