@@ -314,31 +314,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//PRIDE MONTH
-function openPrideModal() {
-            document.getElementById('prideModal').style.display = 'block';
-            // Don't prevent body scrolling since modal is now scrollable
-        }
-
-        function closePrideModal() {
-            document.getElementById('prideModal').style.display = 'none';
-        }
-
-        // Close modal when clicking outside of it
-        window.onclick = function(event) {
-            const modal = document.getElementById('prideModal');
-            if (event.target === modal) {
-                closePrideModal();
-            }
-        }
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closePrideModal();
-            }
-        });
-
 //TAB PROJECTS
 function showTab(tabName) {
             // Hide all tab contents
