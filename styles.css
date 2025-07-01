@@ -629,127 +629,6 @@ h2.section-title {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* PRIDE MONTH CTA BUTTON */
-        .cta-button-pride {
-            display: inline-block;
-            padding: 12px 30px;
-            background: linear-gradient(45deg, 
-                #e40303 0%, 
-                #ff8c00 16.67%, 
-                #ffed00 33.33%, 
-                #008018 50%, 
-                #004cff 66.67%, 
-                #732982 83.33%, 
-                #e40303 100%);
-            background-size: 300% 300%;
-            color: white;
-            text-decoration: none;
-            border-radius: 16px;
-            font-weight: 600;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-            animation: rainbow-shift 5s ease-in-out infinite;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .cta-button-pride:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            animation-duration: 3s;
-        }
-
-        @keyframes rainbow-shift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        /* PRIDE IMAGE MODAL */
-        .pride-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-            overflow-y: auto;
-            padding: 20px 0;
-        }
-
-        .pride-modal-content {
-            position: relative;
-            background-color: white;
-            margin: 0 auto;
-            padding: 30px;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 600px;
-            max-height: 90vh;
-            text-align: center;
-            animation: modalSlideIn 0.4s ease-out;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow-y: auto;
-        }
-
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        .pride-modal-header {
-            background: linear-gradient(45deg, 
-                #e40303, #ff8c00, #ffed00, #008018, #004cff, #732982);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .pride-image {
-            width: 100%;
-            max-width: 350px;
-            height: auto;
-            max-height: 400px;
-            object-fit: contain;
-            border-radius: 15px;
-            margin: 20px 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .pride-message {
-            font-size: 1.2em;
-            color: #333;
-            line-height: 1.6;
-            margin: 20px 0;
-        }
-
-        .close-modal {
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            font-size: 35px;
-            font-weight: bold;
-            color: #aaa;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close-modal:hover {
-            color: #e40303;
-        }
-
         /* TYPING ANIMATION STYLES - LOOPING */
         .typing-text {
             display: inline-block;
@@ -833,23 +712,6 @@ h2.section-title {
                 margin: 0 auto;
             }
 
-            .pride-modal-content {
-                width: 95%;
-                margin: 0 auto;
-                padding: 20px;
-                max-height: 95vh;
-            }
-
-            .pride-modal-header {
-                font-size: 2em;
-            }
-
-            .pride-image {
-                max-width: 300px;
-                max-height: 300px;
-            }
-        }
-
         @media (max-width: 480px) {
             .hero-content h1 {
                 font-size: 1.8em;
@@ -867,21 +729,13 @@ h2.section-title {
                 max-height: 40vh;
             }
             
-            .cta-button, .cta-button-outline, .cta-button-pride {
+            .cta-button, .cta-button-outline {
                 padding: 10px 20px;
                 font-size: 0.9em;
             }
             
             .hero-cta {
                 gap: 10px;
-            }
-
-            .pride-modal-header {
-                font-size: 1.5em;
-            }
-
-            .pride-message {
-                font-size: 1em;
             }
         }
 
