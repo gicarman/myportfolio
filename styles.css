@@ -629,6 +629,7 @@ h2.section-title {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
+
         /* TYPING ANIMATION STYLES - LOOPING */
         .typing-text {
             display: inline-block;
@@ -711,6 +712,7 @@ h2.section-title {
                 display: inline-block;
                 margin: 0 auto;
             }
+        }
 
         @media (max-width: 480px) {
             .hero-content h1 {
@@ -1655,7 +1657,7 @@ h2.section-title {
     }
 }
 
- /* PROJECTS SECTION STYLES */
+  /* PROJECTS SECTION STYLES */
         #projects {
             min-height: 100vh;
             padding: 60px 0;
@@ -1899,6 +1901,7 @@ h2.section-title {
         /* Tab Content */
         .tab-content {
             display: none;
+            font-family: 'Poppins', sans-serif;
         }
 
         .tab-content.active {
